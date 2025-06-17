@@ -1,0 +1,23 @@
+// Import des fichiers de base (reset, typographie, styles globaux)
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+// Import des utilitaires (variables, mixins, fonctions)
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/functions';
+
+// Import des composants (boutons, cartes, icônes, loader)
+@import 'components/button';
+@import 'components/card';
+@import 'components/icon';
+@import 'components/loader';
+
+// Import des layouts (header, footer)
+@import 'layout/header';
+@import 'layout/footer';
+
+// Import des styles spécifiques aux pages
+@import 'pages/home';
+@import 'pages/restaurant';
