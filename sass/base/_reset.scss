@@ -1,0 +1,39 @@
+/* reset.scss — Réinitialisation minimale des styles */
+
+/* On applique box-sizing: border-box à tous les éléments, 
+   y compris les pseudo-éléments ::before et ::after. 
+   Cela facilite la gestion des tailles. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* On supprime les marges et les paddings par défaut 
+   sur les éléments courants pour éviter les décalages inattendus. */
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* On supprime les puces des listes non ordonnées et ordonnées. */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Les images prennent au maximum la largeur du conteneur 
+   et conservent leurs proportions. */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Les liens ne sont plus soulignés et prennent la couleur du texte environnant. */
+a {
+  text-decoration: none;
+  color: inherit;
+}
