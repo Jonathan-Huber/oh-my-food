@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
     <title>Oh My Food</title>
 </head>
 <body>
-    
+
+    <div class="container">
+        <!-- En-tête -->
+        <header class="header">
+            <img src="images/logo/ohmyfood.png" class="header__logo">
+        </header>
+
+        <main>
+
+        <!-- Localisation -->
+        <div class="location">
+            <i class="location__icon"></i>
+            <span class="location__text">Paris, Bellville</span>
+        </div>
+
+        <!-- Présentation -->
+        <section class="hero">
+            <h2 class="hero__title">Réservez le menu qui vous convient</h2>
+            <p class="hero__subtitle"> Découvrez des restaurants d'exeption séléctionnés par nos soins.</p>
+            <a href="#" class="hero__btn">Explorer nos restaurants</a>
+        </section>
+
+        <!-- Fonctionnement -->
+        <section class="steps">
+            <h2 class="steps__title"></h2>
+        </section>
+
+        <!-- Restaurants -->
+        <section class="restaurants">
+            <h2 class="restaurants__title"></h2>
+            <div class="restaurants__cards">                
+                <article class="restaurant-card">
+                    <a class="restaurant-card__link">
+                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="restaurant-card__img">
+                        <div class="restaurant-card__content">
+                            <h3 class="restaurant-card__title">La palette du goût</h3>
+                            <p class="restaurant-card__location">Ménilmontant</p>                           
+                        </div>
+                        <i class="restaurant-card__icon"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        </main>
+
+        <!-- Pied de page -->
+         <footer class="footer">
+            <h2 class="footer__title">ohmyfood</h2>
+            <ul class="footer__links">
+                <li>
+                    <a href="#">
+                        <i class=""></i>
+                        Proposer un restaurant
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class=""></i>
+                        Devenir partenaire
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer__links">
+                <li>
+                    <a href="#">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+
+         </footer>
+
+    </div>
+
 </body>
 </html>
