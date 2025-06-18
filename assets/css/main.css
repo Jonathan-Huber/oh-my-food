@@ -1,7 +1,8 @@
 @charset "UTF-8";
-/* reset.scss — Réinitialisation minimale des styles */
-/* On applique box-sizing: border-box à tous les éléments, 
-   y compris les pseudo-éléments ::before et ::after. 
+/* variables.scss —  */
+/**** _base.scss — Styles globaux de base ****/
+/* Réinitialisation minimale des styles */
+/* box-sizing: border-box à tous les éléments et pseudo-éléments ::before et ::after. 
    Cela facilite la gestion des tailles. */
 *,
 *::before,
@@ -32,8 +33,65 @@ img {
   display: block;
 }
 
-/* Les liens ne sont plus soulignés et prennent la couleur du texte environnant. */
+/* Les liens prennent la couleur du texte environnant. */
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
+}
+
+/* Styles typographiques globaux */
+html {
+  font-size: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  line-height: 1.5;
+}
+
+body {
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+a {
+  color: #9356DC;
+  font-weight: 600;
+}
+a:hover, a:focus {
+  color: #FF79DA;
+  text-decoration: underline;
+}
+
+/* autres règles de base ici */
+body {
+  background-color: #FFFFFF;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
 }
