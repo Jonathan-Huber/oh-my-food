@@ -1,0 +1,14 @@
+/* variables.scss —  */
+
+// Palette brute — couleurs de base, référencées par fonction ensuite
+
+$color-white:    #FFFFFF;   // Fond général (header, sections, cards), texte boutons, footer, icônes
+$color-black:    #000000;   // Texte principal (titres, paragraphes)
+$color-grey:     #353535;   // Textes secondaires (sous-titres, icônes, localisation)
+
+$color-mint:     #99E2D0;   // badges "nouveau", HR, vignette sélection
+$color-green:    #008766;   // texte dans les badges "nouveau"
+$color-lightblue:#89C8FA;   // couleur pas encore trouvée précisément
+$color-darkblue: #003A68;   // couleur pas encore trouvée précisément
+$color-purple:   #9356DC;   // bouton en dégradé, badges numérotés, coeur actif
+$color-pink:     #FF79DA;   // deuxième couleur du dégradé bouton
