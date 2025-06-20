@@ -1,0 +1,14 @@
+@use '../utils/variables';
+
+/**** _footer.scss — Styles pour le footer ****/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$color-grey;
+    padding: 0 variables.$space-lg;
+    
+    a {
+        color: variables.$color-white;
+    }
+}
