@@ -1,0 +1,66 @@
+@use '../utils/variables';
+
+/**** _logo.scss — Styles du logo ****/
+
+.logo {
+  
+  a {
+    display: inline-block;
+    font-weight: 400;
+  }
+
+  &__text {
+    display: inline-block;
+    line-height: 1;
+  }
+
+  &__image {
+    display: none;
+    max-width: 100%;
+    height: auto;
+  }
+
+  // Modifier si on veut utiliser une image à la place du texte
+  &--use-image {
+    & .logo__text {
+        display: none;
+    }
+    & .logo__image {
+        display: inline-block;
+    }
+  }
+
+  // Modificateur pour le logo dans le header (h1)
+  &--header {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-family: 'Shrikhand', cursive;
+    font-size: variables.$font-size-xxxl;
+
+    a {
+        color: variables.$color-black;
+        display: flex;
+        align-items: center;
+    }
+
+    &.logo--use-image a img {
+        max-width: 162px;
+        height: auto;
+    }
+  }
+
+  // Modificateur pour le logo dans le footer (h2)
+  &--footer {
+    font-family: 'Shrikhand', cursive;
+    font-size: variables.$font-size-base;
+
+
+
+    &.logo--use-image a img {
+        max-width: 98px;
+        height: auto;
+    }
+  }
+}
