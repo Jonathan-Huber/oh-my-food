@@ -1,0 +1,16 @@
+@use '../utils/variables';
+
+/**** button.scss — Styles des boutons ****/
+
+.btn {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
+    padding: 0 20px;
+    font-size: variables.$font-size-base;
+    font-weight: 400;
+    color: variables.$color-white;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
