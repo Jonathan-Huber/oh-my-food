@@ -1,0 +1,11 @@
+/**** _header.scss — Styles pour le header ****/
+
+.header {
+    display: flex;
+    position: relative;
+    z-index: 10;
+    height: 63px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
