@@ -6,7 +6,8 @@
 @use 'utils/mixins';
 @use 'utils/functions';
 
-// Import des composants (boutons, cartes, icônes, loader)
+// Import des composants (logo, boutons, cartes, icônes, loader)
+@use "components/logo";
 @use 'components/button';
 @use 'components/card';
 @use 'components/icon';
