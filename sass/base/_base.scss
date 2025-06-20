@@ -47,7 +47,7 @@ html {
   font-size: 100%;  // 16px par défaut
   font-family: 'Roboto', sans-serif;
   color: variables.$color-black;  // texte principal
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 body {
@@ -56,14 +56,13 @@ body {
   -moz-osx-font-smoothing: grayscale;   // Lissage en niveaux de gris sur Firefox (macOS)
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Shrikhand', cursive;
+h2, h3, h4, h5, h6 {
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 0.5em;
 }
 
 h1 {
+  font-weight: 400;
+  font-family: 'Shrikhand', cursive;
   font-size: 1.75rem; // 28px
 }
 
@@ -77,11 +76,10 @@ h3 {
 
 p {
   font-size: 1rem; // 16px
-  margin-bottom: 1em;
 }
 
 a {
-  color: variables.$color-purple;
+  color: variables.$color-black;
   font-weight: 600;
   &:hover,
   &:focus {
