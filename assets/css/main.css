@@ -144,13 +144,13 @@ button {
 .btn {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 3.125rem;
   background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
   padding: 0 20px;
   font-size: 1rem;
   font-weight: 400;
   color: #FFFFFF;
-  border-radius: 25px;
+  border-radius: 1.5625rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
