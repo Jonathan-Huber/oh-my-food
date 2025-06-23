@@ -3,10 +3,11 @@
 // == Couleurs ===================
 
 $color-white:    #FFFFFF;   // Fond général (header, sections, cards), texte boutons, footer, icônes
-$color-lightgrey:#F6F6F6;
-$color-darkgrey: #EAEAEA;
 $color-black:    #000000;   // Texte principal (titres, paragraphes)
-$color-grey:     #353535;   // Textes secondaires (sous-titres, icônes, localisation)
+$color-grey-100: #F6F6F6;
+$color-grey-200: #EAEAEA;
+$color-grey-400: #7E7E7E;
+$color-grey-800: #353535;   // Textes secondaires (sous-titres, icônes, localisation)
 
 $color-mint:     #99E2D0;   // badges "nouveau", HR, vignette sélection
 $color-green:    #008766;   // texte dans les badges "nouveau"
