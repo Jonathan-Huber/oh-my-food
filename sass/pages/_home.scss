@@ -49,10 +49,75 @@
 }
 
 /*Fonctionnement*/
-.steps {
+.process {
     display: flex;
     flex-direction: column;
-    padding: 0 variables.$space-lg;
+    padding: variables.$space-6xl variables.$space-lg;
+
+    &__title {
+        margin-bottom: variables.$space-2xl;
+    }
+
+    &__steps {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$space-xl;
+        margin-bottom: variables.$space-lg;
+    }
+
+    &__step {
+        display: flex;
+        align-items: center;
+    }
+
+    &__step-number{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: variables.$space-xl;
+        height: variables.$space-xl;
+        background-color: variables.$color-purple;
+        border-radius: 50%;
+        color: variables.$color-white;
+        font-size: variables.$font-size-sm;
+        position: relative;
+        z-index: 2;
+        margin-right: -12px;
+
+    }
+
+    &__step-content {
+        display: flex;
+        width: 100%;
+        gap: variables.$space-lg;
+        background-color: variables.$color-grey-100;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        border-radius: variables.$raduis-lg;
+        padding: variables.$space-2xl variables.$space-2xl;
+    }
+
+    &__step-icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: variables.$space-lg;
+        height: variables.$space-lg;
+    }
+
+    &__step-icon {
+        color: variables.$color-grey-400;
+        // font-size: variables.$space-lg;
+    }
+
+    &__step-text {
+        font-weight: 500;
+    }
+
+    &__step--restaurant {
+        .process__step-icon {
+            color: variables.$color-purple;
+    }
+    }
 }
 
 /*Restaurants*/

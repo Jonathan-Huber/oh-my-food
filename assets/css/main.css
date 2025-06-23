@@ -220,10 +220,62 @@ button {
 }
 
 /*Fonctionnement*/
-.steps {
+.process {
   display: flex;
   flex-direction: column;
-  padding: 0 1.25rem;
+  padding: 3rem 1.25rem;
+}
+.process__title {
+  margin-bottom: 1.75rem;
+}
+.process__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.process__step {
+  display: flex;
+  align-items: center;
+}
+.process__step-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  position: relative;
+  z-index: 2;
+  margin-right: -12px;
+}
+.process__step-content {
+  display: flex;
+  width: 100%;
+  gap: 1.25rem;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.75rem;
+}
+.process__step-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.process__step-icon {
+  color: #7E7E7E;
+}
+.process__step-text {
+  font-weight: 500;
+}
+.process__step--restaurant .process__step-icon {
+  color: #9356DC;
 }
 
 /*Restaurants*/
