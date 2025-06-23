@@ -18,17 +18,17 @@ $color-pink:     #FF79DA;   // deuxième couleur du dégradé bouton
 
 // == Typographie ================
 
-$font-main: 'roboto', sans-serif;
+$font-main:  'roboto', sans-serif;
 $font-title: 'Shrikhand', cursive;
 
 // == Tailles de texte (rem)======
 
-$font-size-sm: 0.875rem;    // ~14px
-$font-size-base: 1rem;      // 16px
-$font-size-lg: 1.125rem;    // 18px
-$font-size-xl: 1.5rem;      // 24px
-$font-size-xxl: 1.75rem;    // 28px
-$font-size-xxxl: 1.875rem;  // 30px
+$font-size-sm:      0.875rem;   // ~14px
+$font-size-base:    1rem;       // 16px
+$font-size-lg:      1.125rem;   // 18px
+$font-size-xl:      1.5rem;     // 24px
+$font-size-xxl:     1.75rem;    // 28px
+$font-size-xxxl:    1.875rem;   // 30px
 
 // == Espacements (rem) (EC)======
 
@@ -47,8 +47,8 @@ $space-6xl:   3rem;     // 48px
 
 // == Breakpoints ================
 
-$breakpoint-mobile: 480px;
-$breakpoint-tablet: 768px;
+$breakpoint-mobile:  480px;
+$breakpoint-tablet:  768px;
 $breakpoint-desktop: 1024px;
 $breakpoint-large:   1440px;
 
