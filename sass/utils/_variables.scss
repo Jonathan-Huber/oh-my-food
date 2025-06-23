@@ -33,6 +33,7 @@ $font-size-xxxl:    1.875rem;   // 30px
 // == Espacements (rem) (EC)======
 
 $space-xs:    0.25rem;  // 4px
+$space-xsm:   0.375rem; // 6px
 $space-sm:    0.5rem;   // 8px
 $space-md:    0.75rem;  // 12px
 $space-base:  1rem;     // 16px
@@ -53,7 +54,9 @@ $breakpoint-desktop: 1024px;
 $breakpoint-large:   1440px;
 
 // == Rayons bordure ================
-$raduis-lg: 1.25rem;
-$raduis-xl: 1.5625rem;
+$raduis-xs: 0.125rem;   //2px
+$raduis-md: 0.9375rem; //15px
+$raduis-lg: 1.25rem;   //20px
+$raduis-xl: 1.5625rem; //25px
 
 // à voir (Durées / transitions)

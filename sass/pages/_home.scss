@@ -125,5 +125,60 @@
     display: flex;
     flex-direction: column;
     background-color: variables.$color-grey-100;
-    padding: 0 variables.$space-lg;
+    padding: variables.$space-6xl variables.$space-lg;;
+
+    &__title {
+        margin-bottom: variables.$space-2xl;
+    }
+
+    // &__cards {
+        
+    // }
+
+}
+
+.restaurant-card {
+
+    &__link {
+        display: block;
+        border-radius: variables.$raduis-md;
+        overflow: hidden;
+        position: relative;
+        background-color: variables.$color-white;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 174px;
+        object-fit: cover;
+    }
+
+    &__badge {
+        position: absolute;
+        top: variables.$space-md;
+        right: variables.$space-md;
+        background-color: variables.$color-mint;
+        font-size: variables.$font-size-sm;
+        font-weight: 500;
+        padding: variables.$space-xsm variables.$space-md;
+        border-radius: variables.$raduis-xs;
+        color: variables.$color-green;
+        z-index: 1;
+    }
+
+    &__content {
+        padding: variables.$space-base variables.$space-md;
+    }
+
+    &__location {
+        font-size: 17px;
+        font-weight: 300;
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: variables.$space-3xl;
+        right: variables.$space-xl;
+    }
 }
