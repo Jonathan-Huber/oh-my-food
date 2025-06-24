@@ -131,9 +131,9 @@
         margin-bottom: variables.$space-2xl;
     }
 
-    // &__cards {
-        
-    // }
+    &__cards {
+        margin-bottom: variables.$space-lg;
+    }
 
 }
 
@@ -145,6 +145,8 @@
         overflow: hidden;
         position: relative;
         background-color: variables.$color-white;
+        text-decoration: none;
+        color: inherit;
     }
 
     &__img {
