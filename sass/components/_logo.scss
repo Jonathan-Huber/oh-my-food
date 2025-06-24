@@ -1,4 +1,4 @@
-@use '../utils/variables';
+@use '../utils/variables' as v;
 
 /**** _logo.scss — Styles du logo ****/
 
@@ -37,10 +37,10 @@
     align-items: center;
     height: 100%;
     font-family: 'Shrikhand', cursive;
-    font-size: variables.$font-size-xxxl;
+    font-size: v.$font-size-xxxl;
 
     a {
-        color: variables.$color-black;
+        color: v.$color-black;
         display: flex;
         align-items: center;
     }
@@ -54,7 +54,7 @@
   // Modificateur pour le logo dans le footer (h2)
   &--footer {
     font-family: 'Shrikhand', cursive;
-    font-size: variables.$font-size-base;
+    font-size: v.$font-size-base;
 
 
 

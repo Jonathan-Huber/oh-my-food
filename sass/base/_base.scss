@@ -1,4 +1,4 @@
-@use '../utils/variables';
+@use '../utils/variables' as v;
 
 /**** _base.scss — Styles globaux de base ****/
 
@@ -46,7 +46,7 @@ a {
 html {
   font-size: 100%;  // 16px par défaut
   font-family: 'Roboto', sans-serif;
-  color: variables.$color-black;  // texte principal
+  color: v.$color-black;  // texte principal
   line-height: 1.2;
 }
 
@@ -63,25 +63,25 @@ h2, h3, h4, h5, h6 {
 h1 {
   font-weight: 400;
   font-family: 'Shrikhand', cursive;
-  font-size: 1.75rem; // 28px
+  font-size: v.$font-size-xxl; // 28px
 }
 
 h2 {
-  font-size: 1.5rem; // 24px
+  font-size: v.$font-size-xl; // 24px
 }
 
 h3 {
-  font-size: 1.125rem; // 18px
+  font-size: v.$font-size-lg; // 18px
 }
 
 p {
-  font-size: 1rem; // 16px
+  font-size: v.$font-size-base; // 16px
 }
 
 /* autres règles de base ici */
 
 body {
-  background-color: variables.$color-white;
+  background-color: v.$color-white;
 }
 
 button {

@@ -1,16 +1,16 @@
-@use '../utils/variables';
+@use '../utils/variables' as v;
 
 /**** _footer.scss — Styles pour le footer ****/
 
 .footer {
     display: flex;
     flex-direction: column;
-    background-color: variables.$color-grey-800;
-    padding: variables.$space-xl variables.$space-lg;
-    color: variables.$color-white;
+    background-color: v.$color-grey-800;
+    padding: v.$space-xl v.$space-lg;
+    color: v.$color-white;
 
     .logo {
-        margin-bottom: variables.$space-lg;
+        margin-bottom: v.$space-lg;
     }
     
     a {
@@ -20,16 +20,16 @@
     &__nav-groups {
         display: flex;
         flex-direction: column;
-        gap: variables.$space-sm;
+        gap: v.$space-sm;
     }
 
     &__links {
         display: flex;
         flex-direction: column;
-        gap: variables.$space-sm;
+        gap: v.$space-sm;
     }
 
     &__icon {
-        margin-right: variables.$space-xsm;
+        margin-right: v.$space-xsm;
     }
 }

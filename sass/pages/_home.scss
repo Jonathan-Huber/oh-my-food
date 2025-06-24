@@ -1,4 +1,4 @@
-@use '../utils/variables';
+@use '../utils/variables' as v;
 
 /**** _home.scss — Styles de la page home ****/
 
@@ -9,10 +9,10 @@
     align-items: center;
     position: relative;
     z-index: 1;
-    background-color: variables.$color-grey-200;
+    background-color: v.$color-grey-200;
     height: 50px;
     gap: 17px;
-    color: variables.$color-grey-800;
+    color: v.$color-grey-800;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
     &__text {
@@ -26,25 +26,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: variables.$color-grey-100;
+    background-color: v.$color-grey-100;
     text-align: center;
-    padding: 38px variables.$space-3xl;
+    padding: 38px v.$space-3xl;
     
     &__title {
         text-align: center;
-        padding: 0 variables.$space-xl;
-        margin-bottom: variables.$space-md;
+        padding: 0 v.$space-xl;
+        margin-bottom: v.$space-md;
     }
 
     &__subtitle {
         text-align: center;
-        font-size: variables.$font-size-lg;
-        margin-bottom: variables.$space-3xl;
+        font-size: v.$font-size-lg;
+        margin-bottom: v.$space-3xl;
         font-weight: 300;
     }
 
     &__btn {
-        margin-bottom: variables.$space-base;
+        margin-bottom: v.$space-base;
     }
 }
 
@@ -52,17 +52,17 @@
 .process {
     display: flex;
     flex-direction: column;
-    padding: variables.$space-6xl variables.$space-lg;
+    padding: v.$space-6xl v.$space-lg;
 
     &__title {
-        margin-bottom: variables.$space-2xl;
+        margin-bottom: v.$space-2xl;
     }
 
     &__steps {
         display: flex;
         flex-direction: column;
-        gap: variables.$space-xl;
-        margin-bottom: variables.$space-lg;
+        gap: v.$space-xl;
+        margin-bottom: v.$space-lg;
     }
 
     &__step {
@@ -74,12 +74,12 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        min-width: variables.$space-xl;
-        height: variables.$space-xl;
-        background-color: variables.$color-purple;
+        min-width: v.$space-xl;
+        height: v.$space-xl;
+        background-color: v.$color-purple;
         border-radius: 50%;
-        color: variables.$color-white;
-        font-size: variables.$font-size-sm;
+        color: v.$color-white;
+        font-size: v.$font-size-sm;
         position: relative;
         z-index: 2;
         margin-right: -12px;
@@ -89,24 +89,24 @@
     &__step-content {
         display: flex;
         width: 100%;
-        gap: variables.$space-lg;
-        background-color: variables.$color-grey-100;
+        gap: v.$space-lg;
+        background-color: v.$color-grey-100;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        border-radius: variables.$raduis-lg;
-        padding: variables.$space-2xl variables.$space-2xl;
+        border-radius: v.$raduis-lg;
+        padding: v.$space-2xl v.$space-2xl;
     }
 
     &__step-icon-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: variables.$space-lg;
-        height: variables.$space-lg;
+        width: v.$space-lg;
+        height: v.$space-lg;
     }
 
     &__step-icon {
-        color: variables.$color-grey-400;
-        // font-size: variables.$space-lg;
+        color: v.$color-grey-400;
+        // font-size: v.$space-lg;
     }
 
     &__step-text {
@@ -115,7 +115,7 @@
 
     &__step--restaurant {
         .process__step-icon {
-            color: variables.$color-purple;
+            color: v.$color-purple;
     }
     }
 }
@@ -124,15 +124,15 @@
 .restaurants {
     display: flex;
     flex-direction: column;
-    background-color: variables.$color-grey-100;
-    padding: variables.$space-6xl variables.$space-lg;;
+    background-color: v.$color-grey-100;
+    padding: v.$space-6xl v.$space-lg;;
 
     &__title {
-        margin-bottom: variables.$space-2xl;
+        margin-bottom: v.$space-2xl;
     }
 
     &__cards {
-        margin-bottom: variables.$space-lg;
+        margin-bottom: v.$space-lg;
     }
 
 }
@@ -141,10 +141,10 @@
 
     &__link {
         display: block;
-        border-radius: variables.$raduis-md;
+        border-radius: v.$raduis-md;
         overflow: hidden;
         position: relative;
-        background-color: variables.$color-white;
+        background-color: v.$color-white;
         text-decoration: none;
         color: inherit;
     }
@@ -158,19 +158,19 @@
 
     &__badge {
         position: absolute;
-        top: variables.$space-md;
-        right: variables.$space-md;
-        background-color: variables.$color-mint;
-        font-size: variables.$font-size-sm;
+        top: v.$space-md;
+        right: v.$space-md;
+        background-color: v.$color-mint;
+        font-size: v.$font-size-sm;
         font-weight: 500;
-        padding: variables.$space-xsm variables.$space-md;
-        border-radius: variables.$raduis-xs;
-        color: variables.$color-green;
+        padding: v.$space-xsm v.$space-md;
+        border-radius: v.$raduis-xs;
+        color: v.$color-green;
         z-index: 1;
     }
 
     &__content {
-        padding: variables.$space-base variables.$space-md;
+        padding: v.$space-base v.$space-md;
     }
 
     &__location {
@@ -180,7 +180,7 @@
 
     &__icon {
         position: absolute;
-        bottom: variables.$space-3xl;
-        right: variables.$space-xl;
+        bottom: v.$space-3xl;
+        right: v.$space-xl;
     }
 }
