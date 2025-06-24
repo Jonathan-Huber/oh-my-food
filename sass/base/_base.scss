@@ -78,16 +78,6 @@ p {
   font-size: 1rem; // 16px
 }
 
-a {
-  color: variables.$color-black;
-  font-weight: 600;
-  &:hover,
-  &:focus {
-    color: variables.$color-pink;
-    text-decoration: underline;
-  }
-}
-
 /* autres règles de base ici */
 
 body {
