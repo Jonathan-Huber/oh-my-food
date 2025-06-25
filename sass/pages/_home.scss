@@ -132,7 +132,10 @@
     }
 
     &__cards {
+        display: flex;
+        flex-direction: column;
         margin-bottom: v.$space-lg;
+        gap: v.$space-lg;
     }
 
 }
