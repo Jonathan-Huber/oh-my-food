@@ -92,7 +92,7 @@
         gap: v.$space-lg;
         background-color: v.$color-grey-100;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        border-radius: v.$raduis-lg;
+        border-radius: v.$radius-lg;
         padding: v.$space-2xl v.$space-2xl;
     }
 
@@ -125,7 +125,7 @@
     display: flex;
     flex-direction: column;
     background-color: v.$color-grey-100;
-    padding: v.$space-6xl v.$space-lg;;
+    padding: v.$space-6xl v.$space-lg;
 
     &__title {
         margin-bottom: v.$space-2xl;
@@ -141,7 +141,7 @@
 
     &__link {
         display: block;
-        border-radius: v.$raduis-md;
+        border-radius: v.$radius-md;
         overflow: hidden;
         position: relative;
         background-color: v.$color-white;
@@ -164,7 +164,7 @@
         font-size: v.$font-size-sm;
         font-weight: 500;
         padding: v.$space-xsm v.$space-md;
-        border-radius: v.$raduis-xs;
+        border-radius: v.$radius-xs;
         color: v.$color-green;
         z-index: 1;
     }
