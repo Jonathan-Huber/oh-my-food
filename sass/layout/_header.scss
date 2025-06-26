@@ -1,3 +1,5 @@
+@use '../utils/variables' as v;
+
 /**** _header.scss — Styles pour le header ****/
 
 .header {
@@ -8,4 +10,11 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+    &__icon {
+        position: absolute;
+        left: v.$space-base;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }

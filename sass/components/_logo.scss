@@ -3,11 +3,8 @@
 /**** _logo.scss — Styles du logo ****/
 
 .logo {
-  
-  a {
-    display: inline-block;
-    font-weight: 400;
-  }
+
+  font-weight: 400;
 
   &__text {
     display: inline-block;
@@ -38,14 +35,9 @@
     height: 100%;
     font-family: 'Shrikhand', cursive;
     font-size: v.$font-size-xxxl;
+    color: v.$color-black;
 
-    a {
-        color: v.$color-black;
-        display: flex;
-        align-items: center;
-    }
-
-    &.logo--use-image a img {
+    &.logo--use-image .logo__image {
         max-width: 162px;
         height: auto;
     }
@@ -56,9 +48,7 @@
     font-family: 'Shrikhand', cursive;
     font-size: v.$font-size-base;
 
-
-
-    &.logo--use-image a img {
+    &.logo--use-image .logo__image {
         max-width: 98px;
         height: auto;
     }
