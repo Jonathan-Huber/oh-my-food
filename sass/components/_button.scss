@@ -1,16 +1,78 @@
-@use '../utils/variables' as v;
+@use '../utils/variables' as v;     // Permet d'utiliser les variables définies dans utils/variables avec l’alias v
+@use 'sass:color';                  // Active les fonctions Sass pour manipuler les couleurs
 
-/**** button.scss — Styles des boutons ****/
+// button.scss — Styles des boutons
+
+/* Bouton principal */                                    //Commentaire pour .css
+/* .btn::after — Pseudo-élément décoratif */              //Commentaire pour .css
+/* .btn:hover et .btn:hover::after — Style au survol */   //Commentaire pour .css
+/* .btn > span — Texte au-dessus du décor */              //Commentaire pour .css
+/* .btn:focus-visible — Style au focus clavier */         //Commentaire pour .css
 
 .btn {
-    display: flex;
-    align-items: center;
-    height: 3.125rem;
-    background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
-    padding: 0 20px;
-    font-size: v.$font-size-base;
-    font-weight: 400;
-    color: variables.$color-white;
-    border-radius: v.$radius-xl;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;         // Permet de positionner ::after en absolu par rapport au bouton
+    display: flex;              // Utilise Flexbox pour pouvoir aligner le contenu du bouton
+    justify-content: center;    // Centre le contenu horizontalement (axe principal)
+    align-items: center;        // Centre le contenu verticalement (axe secondaire)
+    height: 3.125rem;           // Définit une hauteur fixe pour le bouton
+    padding: 0 20px;            // Applique un espacement interne à gauche et à droite
+
+    // Dégradé avec angle proche de la verticale (bas vers haut)
+    background: linear-gradient(
+        358deg,
+        v.$color-purple -11.44%,
+        v.$color-pink 123.93% 
+    );
+    
+    color: v.$color-white;          // Définit la couleur du texte
+    font-size: v.$font-size-base;   // Applique la taille de police
+    font-weight: 400;               // Applique un poids à la police
+
+    border-radius: v.$radius-xl;                        // Arrondit les coins du bouton
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);     // Ajoute une ombre sous le bouton
+    overflow: hidden;                                   // Empêche le contenu (comme ::after) de déborder du bouton
+
+    transition: box-shadow 0.3s ease-in-out, outline 0.3s ease-in-out;  // Anime en douceur l’ombre et le contour quand ils changent
+
+    // Pseudo-élément décoratif
+    &::after {
+        content:"";             // Crée un pseudo-élément vide, nécessaire pour que le navigateur le génère
+        position: absolute;     // Place ce pseudo-élément par rapport au bouton (parent relatif)
+        inset: 0;               // Indispensable pour que le pseudo-élément couvre toute la surface du bouton parent
+        border-radius: inherit; // Copie les coins arrondis du bouton pour rester cohérent visuellement
+
+        // Dégradé identique au bouton, avec une légère augmentation de luminosité via color.adjust et $lightness
+        background: linear-gradient(
+            358deg,
+            color.adjust(v.$color-purple, $lightness: 5%) -11.44%,
+            color.adjust(v.$color-pink, $lightness: 5%) 123.93%
+        );
+
+        opacity: 0;                             // Rend ce pseudo-élément invisible par défaut
+        transition: opacity 0.3s ease-in-out;   // Permet de faire apparaître ce décor en fondu
+        z-index: 1;                             // Place ce décor sous le contenu du bouton (texte)
+        pointer-events: none;                   // Laisse passer les clics au travers, pour ne pas bloquer l’interaction avec le bouton
+    }
+
+    // Style au survol
+    &:hover {
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);   // Applique une ombre plus grande et visible au survol pour améliorer la mise en valeur
+
+        &::after {
+            opacity: 1; // Rend visible le pseudo-élément quand on survole le bouton
+        }
+    }
+
+    // Texte au-dessus du décor
+    > span {
+    position: relative; // Active le positionnement pour permettre la gestion du z-index
+    z-index: 2;         // Place le texte au-dessus du décor (::after) pour qui soit visible
+    }
+
+    // Style au focus clavier
+    &:focus-visible {
+    outline: 3px solid color.adjust(v.$color-pink, $lightness: -10%);   // Affiche un contour visible rose foncé quand le bouton reçoit le focus clavier (accessibilité)
+    outline-offset: 3px;                                                // Décale le contour pour ne pas empiéter sur le contenu
+    box-shadow: 0 0 6px 3px color.adjust(v.$color-pink, $alpha: 0.6);     // Ajoute un halo rose translucide autour pour renforcer la visibilité du focus
+    }
 }

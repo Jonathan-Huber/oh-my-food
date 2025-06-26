@@ -131,18 +131,52 @@ button {
   height: auto;
 }
 
-/**** button.scss — Styles des boutons ****/
+/* Bouton principal */
+/* .btn::after — Pseudo-élément décoratif */
+/* .btn:hover et .btn:hover::after — Style au survol */
+/* .btn > span — Texte au-dessus du décor */
+/* .btn:focus-visible — Style au focus clavier */
 .btn {
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 3.125rem;
-  background: linear-gradient(to top, #9356DC -11.44%, #FF79DA 123.93%);
   padding: 0 20px;
+  background: linear-gradient(358deg, #9356DC -11.44%, #FF79DA 123.93%);
+  color: #FFFFFF;
   font-size: 1rem;
   font-weight: 400;
-  color: #FFFFFF;
   border-radius: 1.5625rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out, outline 0.3s ease-in-out;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(358deg, rgb(160.5, 107.125, 224.375) -11.44%, rgb(255, 146.5, 225.0410447761) 123.93%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+.btn:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn > span {
+  position: relative;
+  z-index: 2;
+}
+.btn:focus-visible {
+  outline: 3px solid rgb(255, 70, 203.9179104478);
+  outline-offset: 3px;
+  box-shadow: 0 0 6px 3px #ff79da;
 }
 
 /**** _header.scss — Styles pour le header ****/
