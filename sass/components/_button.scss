@@ -32,6 +32,8 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);     // Ajoute une ombre sous le bouton
     overflow: hidden;                                   // Empêche le contenu (comme ::after) de déborder du bouton
 
+    -webkit-tap-highlight-color: transparent; // supprime la surbrillance bleue au tap sur mobile
+
     transition: box-shadow 0.3s ease-in-out, outline 0.3s ease-in-out;  // Anime en douceur l’ombre et le contour quand ils changent
 
     // Pseudo-élément décoratif
