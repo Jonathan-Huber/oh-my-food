@@ -175,10 +175,11 @@
         background-color: v.$color-mint;
         font-size: v.$font-size-sm;
         font-weight: 500;
-        padding: v.$space-xsm v.$space-md;
+        padding: v.$space-sm v.$space-md;
         border-radius: v.$radius-xs;
         color: v.$color-green;
         z-index: 1;
+        line-height: 1;
     }
 
     &__content {
