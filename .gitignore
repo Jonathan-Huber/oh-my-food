@@ -1,1 +1,6 @@
+# Historique local
 .history/
+# Node modules
+node_modules/
+# Fichiers de build
+*.css.map

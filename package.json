@@ -1,0 +1,24 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "description": "Ce projet fait partie de ma formation d'intégrateur web chez OpenClassrooms.  \r L’objectif est d’intégrer l’interface mobile-first du site d’une start-up, en utilisant **Sass** pour les styles, des **animations CSS**, et un système de **gestion de version avec Git et GitHub**.",
+  "main": "index.js",
+  "scripts": {
+  "sass": "sass sass/main.scss assets/css/main.css",
+  "sass:watch": "sass --watch sass/main.scss:assets/css/main.css"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jonathan-Huber/oh-my-food.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jonathan-Huber/oh-my-food/issues"
+  },
+  "homepage": "https://github.com/Jonathan-Huber/oh-my-food#readme",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
