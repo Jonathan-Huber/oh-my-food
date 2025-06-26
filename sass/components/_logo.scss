@@ -1,4 +1,5 @@
 @use '../utils/variables' as v;
+@use '../utils/mixins' as m;
 
 /**** _logo.scss — Styles du logo ****/
 
@@ -36,6 +37,10 @@
     font-family: 'Shrikhand', cursive;
     font-size: v.$font-size-xxxl;
     color: v.$color-black;
+
+    @include m.desktop {
+      font-size: v.$font-size-4xL;
+    }
 
     &.logo--use-image .logo__image {
         max-width: 162px;

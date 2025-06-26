@@ -1,4 +1,5 @@
 @use '../utils/variables' as v;
+@use '../utils/mixins' as m;
 
 /**** _home.scss — Styles de la page home ****/
 
@@ -23,6 +24,10 @@
 
     &__text {
         font-weight: 500;
+    }
+
+    @include m.desktop {
+        box-shadow: none;
     }
 }
 
@@ -52,6 +57,24 @@
     &__btn {
         margin-bottom: v.$space-base;
     }
+
+    @include m.desktop {
+
+        padding: v.$space-2xl v.$space-3xl;
+
+        &__title {
+            font-size: v.$font-size-5xL;
+            margin-bottom: v.$space-3xl;
+        }
+
+        &__subtitle {
+        margin-bottom: v.$space-2_5xl;
+        }
+
+        &__btn {
+        margin-bottom: 0;
+    }
+    }
 }
 
 /*Fonctionnement*/
@@ -66,9 +89,10 @@
 
     &__steps {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(288px,1fr));
+        grid-template-columns: repeat(1, 1fr);
         gap: v.$space-xl;
         margin-bottom: v.$space-lg;
+        align-items: stretch;
     }
 
     &__step {
@@ -95,12 +119,15 @@
 
     &__step-content {
         display: flex;
+        align-items: center;
         width: 100%;
         gap: v.$space-lg;
         background-color: v.$color-grey-100;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         border-radius: v.$radius-lg;
-        padding: v.$space-2xl v.$space-2xl;
+        padding: v.$space-2xl v.$space-3xl;
+        padding-right: v.$space-lg;
+        height: 100%;
     }
 
     &__step-icon-wrapper {
@@ -117,6 +144,7 @@
     }
 
     &__step-text {
+        // text-align: center;
         font-weight: 500;
     }
 
@@ -125,6 +153,17 @@
             color: v.$color-purple;
     }
     }
+
+    @include m.desktop {
+        padding: v.$space-6xl 180px;
+
+        &__steps {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 0;
+    }
+
+    }
+
 }
 
 /*Restaurants*/
@@ -140,9 +179,25 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        grid-template-columns: repeat(1, 1fr);
         margin-bottom: v.$space-lg;
         gap: v.$space-lg;
+    }
+
+    @include m.tablet {
+
+    &__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    }
+
+    @include m.desktop {
+    padding: v.$space-2xl 180px;
+
+    &__cards {
+        margin-bottom: 0;
+        gap: 50px 100px;
+    }
     }
 
 }

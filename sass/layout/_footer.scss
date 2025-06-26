@@ -1,4 +1,5 @@
 @use '../utils/variables' as v;
+@use '../utils/mixins' as m;
 
 /**** _footer.scss — Styles pour le footer ****/
 
@@ -31,5 +32,31 @@
 
     &__icon {
         margin-right: v.$space-xsm;
+    }
+
+    @include m.desktop {
+        height: 114px;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 90px;
+        padding: v.$space-xl 68px;
+
+        .logo {
+        margin-bottom: 0;
+        order: 2;
+        }
+
+        &__nav-groups {
+            flex-direction: row;
+            gap: v.$space-6xl;
+            order: 1;
+        }
+
+        &__links {
+            display: flex;
+            flex-direction: row;
+            gap: v.$space-base;
+        }
     }
 }
