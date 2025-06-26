@@ -60,7 +60,7 @@
 
     &__steps {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(288px,1fr));
         gap: v.$space-xl;
         margin-bottom: v.$space-lg;
     }
@@ -80,6 +80,7 @@
         border-radius: 50%;
         color: v.$color-white;
         font-size: v.$font-size-sm;
+        line-height: 1;
         position: relative;
         z-index: 2;
         margin-right: -12px;
@@ -142,6 +143,8 @@
 
 .restaurant-card {
 
+    position: relative;
+
     &__link {
         display: block;
         border-radius: v.$radius-md;
@@ -181,9 +184,10 @@
         font-weight: 300;
     }
 
-    &__icon {
-        position: absolute;
-        bottom: v.$space-3xl;
-        right: v.$space-xl;
-    }
+    .heart {
+    position: absolute;
+    bottom: v.$space-3xl;
+    right: v.$space-xl;
+  }
+
 }

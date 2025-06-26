@@ -1,0 +1,85 @@
+/**** _heart.scss — Styles du coeur intéractif ****/
+
+
+/* Composant cœur principal */                                                  //Commentaire pour .css
+/* .heart__checkbox — Élément masqué pour gérer l'état "coché" */               //Commentaire pour .css
+/* .heart__label — Zone cliquable contenant l'icône */                          //Commentaire pour .css
+/* .heart__icon et variantes — Icône vide ou remplie (SVG) */                   //Commentaire pour .css
+/* .heart__checkbox:checked + .heart__label — Affichage de l'état rempli */     //Commentaire pour .css
+/* .heart__checkbox:focus-visible + .heart__label — Style du focus clavier */   //Commentaire pour .css
+
+// Conteneur global du coeur (autour de l’input et du label)
+.heart {
+    position: relative;       // Positionne le coeur comme référence pour les enfants (absolu)
+    display: inline-block;    // Permet d’afficher le coeur à côté d’autres éléments en ligne
+    width: 24px;              // Fixe une largeur
+    height: 24px;             // Fixe une hauteur
+
+    // On cache complètement la checkbox
+    &__checkbox {
+        position: absolute;     // Position hors flux
+        width: 1px;             // Réduit la taille au minimum
+        height: 1px;            // 
+        margin: -1px;           // Supprime l’espace autour
+        padding: 0;             // Supprime le padding
+        border: 0;              // Supprime la bordure
+        clip: rect(0 0 0 0);    // Masque visuellement
+        overflow: hidden;       // Cache le contenu
+        white-space: nowrap;
+    }
+
+    // Label qui déclenche le toggle (clic)
+    &__label {
+        position: relative;                       // Positionne par rapport au contenant
+        width: 100%;                              // Occupe toute la largeur
+        height: 100%;                             // Occupe toute la hauteur
+        cursor: pointer;                          // Affiche une main au survol
+        display: inline-block;                    // Affiche l’élément en ligne
+        touch-action: manipulation;               // Supprime le délai de clic mobile
+        -webkit-tap-highlight-color: transparent; // Supprime le surlignement iOS
+
+        &:active {
+            transform: scale(1.1);              // Agrandis légèrement au clic
+            transition: transform 0.1s ease;    // Anime l'effet
+        }
+    }
+
+        // Les deux images du coeur (vide et plein)
+    &__icon {
+        position: absolute;            // Superpose les icônes
+        top: 0;                        // Aligne en haut
+        left: 0;                       // Aligne à gauche
+        width: 100%;                   // Occupe toute la largeur
+        height: 100%;                  // Occupe toute la hauteur
+        transition: opacity 0.3s ease; // Anime l’opacité
+        user-select: none;             // Empêche la sélection de l’icône
+        
+
+        &--filled {
+            opacity: 0;     // Masque par défaut (on montre le coeur vide d’abord)
+        }
+    }
+            
+
+    // Quand la checkbox est cochée, on affiche le coeur rempli
+    &__checkbox:checked + &__label {
+        .heart__icon--empty {
+        opacity: 0;                     // Masque le coeur vide
+        }
+
+        .heart__icon--filled {
+        opacity: 1;                     // Affiche le coeur plein (avec dégradé par exemple)
+        }
+    }
+
+
+    // Focus Accessible
+    &__checkbox:focus-visible + &__label {
+        outline: 2px solid #FF79DA;      // Affiche un contour rose au focus
+        outline-offset: 3px;               // Décale le contour
+        border-radius: 6px;                // Arrondis les bords
+        transition: outline 0.2s ease-in-out,
+                    outline-offset 0.2s ease-in-out,
+                    border-radius 0.2s ease-in-out;
+    }
+}

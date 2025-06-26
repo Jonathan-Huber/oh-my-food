@@ -85,6 +85,68 @@ button {
   font-family: inherit;
 }
 
+/**** _heart.scss — Styles du coeur intéractif ****/
+/* Composant cœur principal */
+/* .heart__checkbox — Élément masqué pour gérer l'état "coché" */
+/* .heart__label — Zone cliquable contenant l'icône */
+/* .heart__icon et variantes — Icône vide ou remplie (SVG) */
+/* .heart__checkbox:checked + .heart__label — Affichage de l'état rempli */
+/* .heart__checkbox:focus-visible + .heart__label — Style du focus clavier */
+.heart {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+.heart__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.heart__label {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: inline-block;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.heart__label:active {
+  transform: scale(1.1);
+  transition: transform 0.1s ease;
+}
+.heart__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+  user-select: none;
+}
+.heart__icon--filled {
+  opacity: 0;
+}
+.heart__checkbox:checked + .heart__label .heart__icon--empty {
+  opacity: 0;
+}
+.heart__checkbox:checked + .heart__label .heart__icon--filled {
+  opacity: 1;
+}
+.heart__checkbox:focus-visible + .heart__label {
+  outline: 2px solid #FF79DA;
+  outline-offset: 3px;
+  border-radius: 6px;
+  transition: outline 0.2s ease-in-out, outline-offset 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+}
+
 /**** _logo.scss — Styles du logo ****/
 .logo a {
   display: inline-block;
@@ -337,6 +399,9 @@ button {
   gap: 1.25rem;
 }
 
+.restaurant-card {
+  position: relative;
+}
 .restaurant-card__link {
   display: block;
   border-radius: 0.9375rem;
@@ -371,7 +436,7 @@ button {
   font-size: 17px;
   font-weight: 300;
 }
-.restaurant-card__icon {
+.restaurant-card .heart {
   position: absolute;
   bottom: 2rem;
   right: 1.5rem;
