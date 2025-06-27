@@ -12,8 +12,8 @@
 .heart {
     position: relative;       // Positionne le coeur comme référence pour les enfants (absolu)
     display: inline-block;    // Permet d’afficher le coeur à côté d’autres éléments en ligne
-    width: 24px;              // Fixe une largeur
-    height: 24px;             // Fixe une hauteur
+    width: 22px;              // Fixe une largeur
+    height: 21px;             // Fixe une hauteur
 
     // On cache complètement la checkbox
     &__checkbox {
