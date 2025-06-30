@@ -35,11 +35,11 @@
     align-items: center;
     height: 100%;
     font-family: 'Shrikhand', cursive;
-    font-size: v.$font-size-xxxl;
+    font-size: v.$size-15;
     color: v.$color-black;
 
     @include m.desktop {
-      font-size: v.$font-size-4xL;
+      font-size: v.$size-17;
     }
 
     &.logo--use-image .logo__image {
@@ -51,7 +51,7 @@
   // Modificateur pour le logo dans le footer (h2)
   &--footer {
     font-family: 'Shrikhand', cursive;
-    font-size: v.$font-size-base;
+    font-size: v.$size-8;
 
     &.logo--use-image .logo__image {
         max-width: 98px;

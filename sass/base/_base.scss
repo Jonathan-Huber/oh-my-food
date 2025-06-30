@@ -63,19 +63,19 @@ h2, h3, h4, h5, h6 {
 h1 {
   font-weight: 400;
   font-family: 'Shrikhand', cursive;
-  font-size: v.$font-size-xxl; // 28px
+  font-size: v.$size-14; // 28px
 }
 
 h2 {
-  font-size: v.$font-size-xl; // 24px
+  font-size: v.$size-12; // 24px
 }
 
 h3 {
-  font-size: v.$font-size-lg; // 18px
+  font-size: v.$size-9; // 18px
 }
 
 p {
-  font-size: v.$font-size-base; // 16px
+  font-size: v.$size-8; // 16px
 }
 
 /* autres règles de base ici */

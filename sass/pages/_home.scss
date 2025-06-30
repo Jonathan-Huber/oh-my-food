@@ -2,254 +2,271 @@
 @use '../utils/mixins' as m;
 
 /**** _home.scss — Styles de la page home ****/
+.page-home {
 
-/*header*/
-.header__back {
-  display: none;
-}
-
-
-/*localisation*/
-.location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    background-color: v.$color-grey-200;
-    height: 50px;
-    gap: 17px;
-    color: v.$color-grey-800;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-    &__text {
-        font-weight: 500;
+    /*header*/
+    .header__back {
+    display: none;
     }
 
-    @include m.desktop {
-        box-shadow: none;
-    }
-}
 
-/*hero*/
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: v.$color-grey-100;
-    text-align: center;
-    padding: 38px v.$space-3xl;
-    
-    &__title {
+    /*localisation*/
+    .location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        background-color: v.$color-grey-200;
+        height: 50px;
+        gap: 17px;
+        color: v.$color-grey-800;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        &__text {
+            font-weight: 500;
+        }
+
+        @include m.desktop {
+            box-shadow: none;
+        }
+    }
+
+    /*hero*/
+    .hero {
+        background-color: v.$color-grey-100;
+
+        &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         text-align: center;
-        padding: 0 v.$space-xl;
-        margin-bottom: v.$space-md;
-    }
-
-    &__subtitle {
-        text-align: center;
-        font-size: v.$font-size-lg;
-        margin-bottom: v.$space-3xl;
-        font-weight: 300;
-    }
-
-    &__btn {
-        margin-bottom: v.$space-base;
-    }
-
-    @include m.desktop {
-
-        padding: v.$space-2xl v.$space-3xl;
-
+        padding: 38px v.$size-16;
+        }
+        
         &__title {
-            font-size: v.$font-size-5xL;
-            margin-bottom: v.$space-3xl;
+            text-align: center;
+            padding: 0 v.$size-12;
+            margin-bottom: v.$size-6;
         }
 
         &__subtitle {
-        margin-bottom: v.$space-2_5xl;
+            text-align: center;
+            font-size: v.$size-9;
+            margin-bottom: v.$size-16;
+            font-weight: 300;
         }
 
         &__btn {
-        margin-bottom: 0;
-    }
-    }
-}
+            margin-bottom: v.$size-8;
+        }
 
-/*Fonctionnement*/
-.process {
-    display: flex;
-    flex-direction: column;
-    padding: v.$space-6xl v.$space-lg;
+        @include m.desktop {
 
-    &__title {
-        margin-bottom: v.$space-2xl;
-    }
+            &__container {
+                padding: v.$size-14 v.$size-16;
+            }
 
-    &__steps {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: v.$space-xl;
-        margin-bottom: v.$space-lg;
-        align-items: stretch;
-    }
+            &__title {
+                font-size: v.$size-20;
+                margin-bottom: v.$size-16;
+            }
 
-    &__step {
-        display: flex;
-        align-items: center;
+            &__subtitle {
+            margin-bottom: v.$size-15;
+            }
+
+            &__btn {
+            margin-bottom: 0;
+        }
+        }
     }
 
-    &__step-number{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        min-width: v.$space-xl;
-        height: v.$space-xl;
-        background-color: v.$color-purple;
-        border-radius: 50%;
-        color: v.$color-white;
-        font-size: v.$font-size-sm;
-        line-height: 1;
-        position: relative;
-        z-index: 2;
-        margin-right: -12px;
+    /*Fonctionnement*/
+    .process {
 
-    }
+        &__container {
+            display: flex;
+            flex-direction: column;
+            padding: v.$size-24 v.$size-10;
+        }
 
-    &__step-content {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        gap: v.$space-lg;
-        background-color: v.$color-grey-100;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        border-radius: v.$radius-lg;
-        padding: v.$space-2xl v.$space-3xl;
-        padding-right: v.$space-lg;
-        height: 100%;
-    }
-
-    &__step-icon-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: v.$space-lg;
-        height: v.$space-lg;
-    }
-
-    &__step-icon {
-        color: v.$color-grey-400;
-        // font-size: v.$space-lg;
-    }
-
-    &__step-text {
-        // text-align: center;
-        font-weight: 500;
-    }
-
-    &__step--restaurant {
-        .process__step-icon {
-            color: v.$color-purple;
-    }
-    }
-
-    @include m.desktop {
-        padding: v.$space-6xl 180px;
+        &__title {
+            margin-bottom: v.$size-14;
+        }
 
         &__steps {
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 0;
-    }
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: v.$size-12;
+            margin-bottom: v.$size-10;
+            align-items: stretch;
+        }
+
+        &__step {
+            display: flex;
+            align-items: center;
+        }
+
+        &__step-number{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-width: v.$size-12;
+            height: v.$size-12;
+            background-color: v.$color-purple;
+            border-radius: 50%;
+            color: v.$color-white;
+            font-size: v.$size-7;
+            line-height: 1;
+            position: relative;
+            z-index: 2;
+            margin-right: -12px;
+
+        }
+
+        &__step-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: v.$size-10;
+            background-color: v.$color-grey-100;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            border-radius: v.$size-10;
+            padding: v.$size-14 v.$size-16;
+            padding-right: v.$size-10;
+            height: 100%;
+        }
+
+        &__step-icon-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: v.$size-10;
+            height: v.$size-10;
+        }
+
+        &__step-icon {
+            color: v.$color-grey-400;
+            // font-size: v.$size-10;
+        }
+
+        &__step-text {
+            // text-align: center;
+            font-weight: 500;
+        }
+
+        &__step--restaurant {
+            .process__step-icon {
+                color: v.$color-purple;
+        }
+        }
+
+        @include m.desktop {
+
+            &__container {
+                padding: v.$size-24 180px;
+            }
+
+            &__steps {
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 0;
+        }
+
+        }
 
     }
 
-}
+    /*Restaurants*/
+    .restaurants {    
+        background-color: v.$color-grey-100;
 
-/*Restaurants*/
-.restaurants {
-    display: flex;
-    flex-direction: column;
-    background-color: v.$color-grey-100;
-    padding: v.$space-6xl v.$space-lg;
+        &__container {
+            display: flex;
+            flex-direction: column;
+            padding: v.$size-24 v.$size-10;
+            }
 
-    &__title {
-        margin-bottom: v.$space-2xl;
+        &__title {
+            margin-bottom: v.$size-14;
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin-bottom: v.$size-10;
+            gap: v.$size-10;
+        }
+
+        @include m.tablet {
+
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        }
+
+        @include m.desktop {
+
+        &__container {
+            padding: v.$size-14 180px;
+        }
+
+        &__cards {
+            margin-bottom: 0;
+            gap: 50px 100px;
+        }
+        }
+
     }
 
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        margin-bottom: v.$space-lg;
-        gap: v.$space-lg;
-    }
-
-    @include m.tablet {
-
-    &__cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    }
-
-    @include m.desktop {
-    padding: v.$space-2xl 180px;
-
-    &__cards {
-        margin-bottom: 0;
-        gap: 50px 100px;
-    }
-    }
-
-}
-
-.restaurant-card {
-
-    position: relative;
-
-    &__link {
-        display: block;
-        border-radius: v.$radius-md;
-        overflow: hidden;
+    .restaurant-card {
         position: relative;
-        background-color: v.$color-white;
-        text-decoration: none;
-        color: inherit;
-    }
 
-    &__img {
-        display: block;
-        width: 100%;
-        height: 174px;
-        object-fit: cover;
-    }
+        &__link {
+            display: block;
+            border-radius: v.$size-7 + v.$size-one;
+            overflow: hidden;
+            position: relative;
+            background-color: v.$color-white;
+            text-decoration: none;
+            color: inherit;
+        }
 
-    &__badge {
+        &__img {
+            display: block;
+            width: 100%;
+            height: 174px;
+            object-fit: cover;
+        }
+
+        &__badge {
+            position: absolute;
+            top: v.$size-6;
+            right: v.$size-6;
+            background-color: v.$color-mint;
+            font-size: v.$size-7;
+            font-weight: 500;
+            padding: v.$size-4 v.$size-6;
+            border-radius: v.$size-1;
+            color: v.$color-green;
+            z-index: 1;
+            line-height: 1;
+        }
+
+        &__content {
+            padding: v.$size-8 v.$size-6;
+        }
+
+        &__location {
+            font-size: 17px;
+            font-weight: 300;
+        }
+
+        .heart {
         position: absolute;
-        top: v.$space-md;
-        right: v.$space-md;
-        background-color: v.$color-mint;
-        font-size: v.$font-size-sm;
-        font-weight: 500;
-        padding: v.$space-sm v.$space-md;
-        border-radius: v.$radius-xs;
-        color: v.$color-green;
-        z-index: 1;
-        line-height: 1;
+        bottom: v.$size-16;
+        right: v.$size-12;
     }
-
-    &__content {
-        padding: v.$space-base v.$space-md;
     }
-
-    &__location {
-        font-size: 17px;
-        font-weight: 300;
-    }
-
-    .heart {
-    position: absolute;
-    bottom: v.$space-3xl;
-    right: v.$space-xl;
-  }
-
 }

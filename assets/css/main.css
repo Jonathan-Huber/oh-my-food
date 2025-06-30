@@ -100,8 +100,8 @@ button {
 .heart {
   position: relative;
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 21px;
 }
 .heart__checkbox {
   position: absolute;
@@ -248,13 +248,15 @@ button {
 
 /**** _header.scss — Styles pour le header ****/
 .header {
-  display: flex;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.header__container {
   position: relative;
   z-index: 10;
+  display: flex;
   height: 63px;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .header__icon {
   position: absolute;
@@ -264,16 +266,20 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .header {
-    height: 96px;
     box-shadow: none;
+  }
+  .header__container {
+    height: 96px;
   }
 }
 
 /**** _footer.scss — Styles pour le footer ****/
 .footer {
+  background-color: #353535;
+}
+.footer__container {
   display: flex;
   flex-direction: column;
-  background-color: #353535;
   padding: 1.5rem 1.25rem;
   color: #FFFFFF;
 }
@@ -297,7 +303,7 @@ button {
   margin-right: 0.375rem;
 }
 @media screen and (min-width: 1024px) {
-  .footer {
+  .footer__container {
     height: 114px;
     flex-direction: row;
     justify-content: flex-end;
@@ -322,13 +328,17 @@ button {
 }
 
 /**** _home.scss — Styles de la page home ****/
-/*header*/
-.header__back {
+.page-home {
+  /*header*/
+  /*localisation*/
+  /*hero*/
+  /*Fonctionnement*/
+  /*Restaurants*/
+}
+.page-home .header__back {
   display: none;
 }
-
-/*localisation*/
-.location {
+.page-home .location {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,76 +350,74 @@ button {
   color: #353535;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.location__text {
+.page-home .location__text {
   font-weight: 500;
 }
 @media screen and (min-width: 1024px) {
-  .location {
+  .page-home .location {
     box-shadow: none;
   }
 }
-
-/*hero*/
-.hero {
+.page-home .hero {
+  background-color: #F6F6F6;
+}
+.page-home .hero__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #F6F6F6;
   text-align: center;
   padding: 38px 2rem;
 }
-.hero__title {
+.page-home .hero__title {
   text-align: center;
   padding: 0 1.5rem;
   margin-bottom: 0.75rem;
 }
-.hero__subtitle {
+.page-home .hero__subtitle {
   text-align: center;
   font-size: 1.125rem;
   margin-bottom: 2rem;
   font-weight: 300;
 }
-.hero__btn {
+.page-home .hero__btn {
   margin-bottom: 1rem;
 }
 @media screen and (min-width: 1024px) {
-  .hero {
+  .page-home .hero__container {
     padding: 1.75rem 2rem;
   }
-  .hero__title {
+  .page-home .hero__title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
   }
-  .hero__subtitle {
+  .page-home .hero__subtitle {
     margin-bottom: 1.875rem;
   }
-  .hero__btn {
+  .page-home .hero__btn {
     margin-bottom: 0;
   }
 }
-
-/*Fonctionnement*/
-.process {
+.page-home .process__container {
   display: flex;
   flex-direction: column;
   padding: 3rem 1.25rem;
 }
-.process__title {
+.page-home .process__title {
   margin-bottom: 1.75rem;
 }
-.process__steps {
+.page-home .process__steps {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem;
   margin-bottom: 1.25rem;
   align-items: stretch;
 }
-.process__step {
+.page-home .process__step {
   display: flex;
   align-items: center;
 }
-.process__step-number {
+.page-home .process__step-number {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -424,7 +432,7 @@ button {
   z-index: 2;
   margin-right: -12px;
 }
-.process__step-content {
+.page-home .process__step-content {
   display: flex;
   align-items: center;
   width: 100%;
@@ -436,67 +444,66 @@ button {
   padding-right: 1.25rem;
   height: 100%;
 }
-.process__step-icon-wrapper {
+.page-home .process__step-icon-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 1.25rem;
   height: 1.25rem;
 }
-.process__step-icon {
+.page-home .process__step-icon {
   color: #7E7E7E;
 }
-.process__step-text {
+.page-home .process__step-text {
   font-weight: 500;
 }
-.process__step--restaurant .process__step-icon {
+.page-home .process__step--restaurant .process__step-icon {
   color: #9356DC;
 }
 @media screen and (min-width: 1024px) {
-  .process {
+  .page-home .process__container {
     padding: 3rem 180px;
   }
-  .process__steps {
+  .page-home .process__steps {
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 0;
   }
 }
-
-/*Restaurants*/
-.restaurants {
+.page-home .restaurants {
+  background-color: #F6F6F6;
+}
+.page-home .restaurants__container {
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F6;
   padding: 3rem 1.25rem;
 }
-.restaurants__title {
+.page-home .restaurants__title {
   margin-bottom: 1.75rem;
 }
-.restaurants__cards {
+.page-home .restaurants__cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   margin-bottom: 1.25rem;
   gap: 1.25rem;
 }
 @media screen and (min-width: 768px) {
-  .restaurants__cards {
+  .page-home .restaurants__cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 1024px) {
-  .restaurants {
+  .page-home .restaurants__container {
     padding: 1.75rem 180px;
   }
-  .restaurants__cards {
+  .page-home .restaurants__cards {
     margin-bottom: 0;
     gap: 50px 100px;
   }
 }
-
-.restaurant-card {
+.page-home .restaurant-card {
   position: relative;
 }
-.restaurant-card__link {
+.page-home .restaurant-card__link {
   display: block;
   border-radius: 0.9375rem;
   overflow: hidden;
@@ -505,13 +512,13 @@ button {
   text-decoration: none;
   color: inherit;
 }
-.restaurant-card__img {
+.page-home .restaurant-card__img {
   display: block;
   width: 100%;
   height: 174px;
   object-fit: cover;
 }
-.restaurant-card__badge {
+.page-home .restaurant-card__badge {
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -524,14 +531,14 @@ button {
   z-index: 1;
   line-height: 1;
 }
-.restaurant-card__content {
+.page-home .restaurant-card__content {
   padding: 1rem 0.75rem;
 }
-.restaurant-card__location {
+.page-home .restaurant-card__location {
   font-size: 17px;
   font-weight: 300;
 }
-.restaurant-card .heart {
+.page-home .restaurant-card .heart {
   position: absolute;
   bottom: 2rem;
   right: 1.5rem;

@@ -4,14 +4,17 @@
 /**** _footer.scss — Styles pour le footer ****/
 
 .footer {
-    display: flex;
-    flex-direction: column;
     background-color: v.$color-grey-800;
-    padding: v.$space-xl v.$space-lg;
-    color: v.$color-white;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: v.$size-12 v.$size-10;
+        color: v.$color-white;
+    }
 
     .logo {
-        margin-bottom: v.$space-lg;
+        margin-bottom: v.$size-10;
     }
     
     a {
@@ -21,26 +24,29 @@
     &__nav-groups {
         display: flex;
         flex-direction: column;
-        gap: v.$space-sm;
+        gap: v.$size-4;
     }
 
     &__links {
         display: flex;
         flex-direction: column;
-        gap: v.$space-sm;
+        gap: v.$size-4;
     }
 
     &__icon {
-        margin-right: v.$space-xsm;
+        margin-right: v.$size-3;
     }
 
     @include m.desktop {
+
+        &__container {
         height: 114px;
         flex-direction: row;
         justify-content: flex-end;
         align-items: flex-end;
         gap: 90px;
-        padding: v.$space-xl 68px;
+        padding: v.$size-12 68px;
+        }
 
         .logo {
         margin-bottom: 0;
@@ -49,14 +55,14 @@
 
         &__nav-groups {
             flex-direction: row;
-            gap: v.$space-6xl;
+            gap: v.$size-24;
             order: 1;
         }
 
         &__links {
             display: flex;
             flex-direction: row;
-            gap: v.$space-base;
+            gap: v.$size-8;
         }
     }
 }
