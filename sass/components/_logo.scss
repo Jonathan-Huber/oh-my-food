@@ -38,7 +38,7 @@
     font-size: v.$size-15;
     color: v.$color-black;
 
-    @include m.desktop {
+    @include m.tablet {
       font-size: v.$size-17;
     }
 
