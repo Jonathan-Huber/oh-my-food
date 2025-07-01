@@ -6,10 +6,10 @@
 .header {
     
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-
-    &__container {
     position: relative;
     z-index: 10;
+
+    &__container {
     display: flex;
     height: 63px;
     justify-content: center;
@@ -23,12 +23,14 @@
         transform: translateY(-50%);
     }
 
-    @include m.desktop {
-        box-shadow: none; // plus d'ombre sur desktop
-
+    @include m.tablet {
         &__container {
             height: 96px;
         }
+    }
+
+    @include m.desktop {
+        box-shadow: none;
     }
   
 }
