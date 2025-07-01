@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>La palette du goût – Restaurant</title>
+    <meta name="description" content="La palette du goût.">
+</head>
+<body class="page-restaurants">
+    <!-- En-tête -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="../index.html" class="header__back">
+            <img src="../assets/images/icon/GoBack.svg" alt="" class="header__icon">
+            </a>
+            <div class="logo logo--header logo--use-text">
+                    <span class="logo__text">ohmyfood</span>
+                    <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo__image">
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+    <div class="hero-plate">
+    <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat du restaurant en situation sur une table" class="hero-plate__photo">
+    </div>
+
+    <section class="menu">
+        <div class="menu__container">
+            <div class="menu__title-group">
+            <h1 class="menu__title">La palette du goût</h1>
+            <div class="heart">
+                <input type="checkbox" id="heart-toggle-3" class="heart__checkbox">
+                <label for="heart-toggle-3" class="heart__label" aria-label="Ajouter aux favoris">
+                    <img src="../assets/images/icon/heart.svg" alt="Coeur vide" class="heart__icon heart__icon--empty">
+                    <img src="../assets/images/icon/heart_hover.svg" alt="Coeur plein" class="heart__icon heart__icon--filled">
+                </label>
+            </div>
+            </div>
+            <!-- Entrées -->
+            <div class="menu__category">
+                <h2 class="menu__subtitle">ENTRÉES</h2>
+                <hr class="menu__separator">
+
+                <ul class="menu__items">
+                    <li class="menu__item ">
+                        <p class="menu__item-title">Fricassée d'escargots</p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">Au piment d’Espelette</p>
+                            <p class="menu__item-price">25€</p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <p class="menu__item-title">Foie gras de canard mi-cuit</p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">Et ses copeaux de truffe noire</p>
+                            <p class="menu__item-price">35€</p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <p class="menu__item-title">Œuf au plat</p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">Assaisonné à la truffe sur lit de caviar</p>
+                            <p class="menu__item-price">20€</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Plats -->
+            <div class="menu__category">
+                <h2 class="menu__subtitle">PLATS</h2>
+                <hr class="menu__separator">
+
+                <ul class="menu__items">
+                    <li class="menu__item">
+                        <p class="menu__item-title">Filet de bœuf aux herbes</p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">Accompagné de sa ribambelle de légumes</p>
+                            <p class="menu__item-price">40€</p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <p class="menu__item-title">Parmentier de queue de bœuf</p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">À la truffe noire sur sa purée de panais</p>
+                            <p class="menu__item-price">35€</p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <p class="menu__item-title">Filet de turbot</p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">Aux agrumes</p>
+                            <p class="menu__item-price">44€</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Desserts -->
+            <div class="menu__category">
+                <h2 class="menu__subtitle">DESSERTS</h2>
+                <hr class="menu__separator">
+
+                <ul class="menu__items">
+                    <li class="menu__item">
+                        <p class="menu__item-title">Paris-Brest</p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">Revisité</p>
+                            <p class="menu__item-price">18€</p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <p class="menu__item-title">Macaron au chocolat d'exception </p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">Et glace à la vanille de Madagascar</p>
+                            <p class="menu__item-price">22€</p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <p class="menu__item-title">Mousse au chocolat </p>
+                        <div class="menu__item-details">
+                            <p class="menu__item-desc">Au piment d'Espelette et à la truffe noire</p>
+                            <p class="menu__item-price">23€</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container footer__container">
+        <h2 class="logo logo--footer logo--use-text">
+            <a href="/">
+                <span class="logo__text">Ohmyfood</span>
+                <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo__image" hidden>
+            </a>
+        </h2>
+        <nav class="footer__nav-groups" aria-label="Liens utiles">
+            <ul class="footer__links">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-xs fa-utensils footer__icon"></i>
+                        Proposer un restaurant
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-xs fa-handshake-angle footer__icon"></i>
+                        Devenir partenaire
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer__links">
+                <li>
+                    <a href="#">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="mailto:">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </footer>
+</body>
+</html>
