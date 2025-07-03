@@ -16,7 +16,7 @@
    sur les éléments courants pour éviter les décalages inattendus. */
 body,
 h1, h2, h3, h4, h5, h6,
-p, ul, ol, figure {
+p, ul, ol, figure, hr {
   margin: 0;
   padding: 0;
 }
@@ -45,12 +45,13 @@ a {
 
 html {
   font-size: 100%;  // 16px par défaut
-  font-family: 'Roboto', sans-serif;
+  font-family: v.$font-main;
   color: v.$color-black;  // texte principal
   line-height: 1.2;
 }
 
 body {
+  min-width: 360px;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;  // Rendu plus net et léger sur Safari/Chrome (macOS)
   -moz-osx-font-smoothing: grayscale;   // Lissage en niveaux de gris sur Firefox (macOS)
