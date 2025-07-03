@@ -291,9 +291,6 @@ button {
 .footer .logo {
   margin-bottom: 1.25rem;
 }
-.footer a {
-  font-weight: 400;
-}
 .footer__nav-groups {
   display: flex;
   flex-direction: column;
@@ -303,6 +300,10 @@ button {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font-weight: 500;
+}
+.footer__links--weight {
+  font-weight: 400;
 }
 .footer__icon {
   margin-right: 0.375rem;
@@ -333,13 +334,6 @@ button {
 }
 
 /**** _home.scss — Styles de la page home ****/
-.page-home {
-  /*header*/
-  /*localisation*/
-  /*hero*/
-  /*Fonctionnement*/
-  /*Restaurants*/
-}
 .page-home .header__back {
   display: none;
 }
