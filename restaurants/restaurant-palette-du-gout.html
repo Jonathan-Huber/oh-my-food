@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/main.css">
+
     <title>La palette du goût – Restaurant</title>
     <meta name="description" content="La palette du goût.">
 </head>
 <body class="page-restaurants">
+
     <!-- En-tête -->
     <header class="header">
         <div class="container header__container">
             <a href="../index.html" class="header__back">
-            <img src="../assets/images/icon/GoBack.svg" alt="" class="header__icon">
+                <img src="../assets/images/icon/goback.svg" alt="" class="header__icon">
             </a>
+
+            <!-- 
+            Pour afficher le logo en texte ou en image,
+            basculez entre les classes 
+            "logo--use-text" (texte visible)
+            "logo--use-image" (image visible) sur le conteneur .logo ;
+            le CSS gère l’affichage automatiquement.
+            -->
             <div class="logo logo--header logo--use-text">
-                    <span class="logo__text">ohmyfood</span>
-                    <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo__image">
+                <span class="logo__text">ohmyfood</span>
+                <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo__image">
             </div>
         </div>
     </header>
 
+    <!-- Contenu principal de la page -->
     <main>
-
-    <div class="hero-plate">
-    <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat du restaurant en situation sur une table" class="hero-plate__photo">
-    </div>
+        <div class="hero-plate">
+            <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat du restaurant en situation sur une table" class="hero-plate__photo">
+        </div>
 
         <section class="menu">
             <div class="menu__container">
@@ -170,39 +182,50 @@
             </div>
         </section>
     </main>
+
     <!-- Pied de page -->
     <footer class="footer">
         <div class="container footer__container">
-        <h2 class="logo logo--footer logo--use-text">
-            <a href="/">
-                <span class="logo__text">Ohmyfood</span>
-                <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo__image" hidden>
-            </a>
-        </h2>
-        <nav class="footer__nav-groups" aria-label="Liens utiles">
-            <ul class="footer__links">
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-xs fa-utensils footer__icon"></i>
-                        Proposer un restaurant
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-xs fa-handshake-angle footer__icon"></i>
-                        Devenir partenaire
-                    </a>
-                </li>
-            </ul>
-            <ul class="footer__links">
-                <li>
-                    <a href="#">Mentions légales</a>
-                </li>
-                <li>
-                    <a href="mailto:">Contact</a>
-                </li>
-            </ul>
-        </nav>
+
+            <!-- 
+            Pour afficher le logo en texte ou en image,
+            basculez entre les classes 
+            "logo--use-text" (texte visible)
+            "logo--use-image" (image visible) sur le conteneur .logo ;
+            le CSS gère l’affichage automatiquement.
+            -->
+            <h2 class="logo logo--footer logo--use-text">
+                <a href="/">
+                    <span class="logo__text">Ohmyfood</span>
+                    <img src="../assets/images/logo/ohmyfood@2x_white.svg" alt="Ohmyfood" class="logo__image">
+                </a>
+            </h2>
+
+            <nav class="footer__nav-groups" aria-label="Liens utiles">
+                <ul class="footer__links">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-xs fa-utensils footer__icon"></i>
+                            Proposer un restaurant
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-xs fa-handshake-angle footer__icon"></i>
+                            Devenir partenaire
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="mailto:">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </footer>
 </body>
