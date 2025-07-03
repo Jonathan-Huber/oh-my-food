@@ -4,33 +4,33 @@
 /**** _header.scss — Styles pour le header ****/
 
 .header {
-    
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 10;
+    
+    box-shadow: 0 v.$size-1 v.$size-2 rgba(0, 0, 0, 0.15);
 
     &__container {
-    display: flex;
-    height: 63px;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3.9375rem;
     }
 
     &__icon {
         position: absolute;
         left: v.$size-8;
         top: 50%;
+
         transform: translateY(-50%);
     }
 
     @include m.tablet {
         &__container {
-            height: 96px;
+            height: 6rem;
         }
     }
 
     @include m.desktop {
         box-shadow: none;
     }
-  
 }
