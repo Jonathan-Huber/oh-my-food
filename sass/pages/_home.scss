@@ -12,16 +12,19 @@
 
     // localisation
     .location {
+        position: relative;
+        z-index: 1;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
-        z-index: 1;
-        background-color: v.$color-grey-200;
-        height: 50px;
-        gap: 17px;
+        gap: (v.$size-8 + v.$size-one);
+        height: v.$size-25;
+
         color: v.$color-grey-800;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        background-color: v.$color-grey-200;
+        box-shadow: 0 v.$size-2 v.$size-2 0 rgba(0, 0, 0, 0.25);
 
         &__text {
             font-weight: 500;
@@ -41,8 +44,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        padding: v.$size-19 v.$size-16;
+
         text-align: center;
-        padding: 38px v.$size-16;
         }
         
         &__title {
@@ -51,8 +56,8 @@
         }
 
         &__subtitle {
-            font-size: v.$size-9;
             margin-bottom: v.$size-16;
+            font-size: v.$size-9;
             font-weight: 300;
         }
 
@@ -87,6 +92,7 @@
         &__container {
             display: flex;
             flex-direction: column;
+
             padding: v.$size-24 v.$size-10;
         }
 
@@ -97,9 +103,10 @@
         &__steps {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            gap: v.$size-12;
-            margin-bottom: v.$size-10;
             align-items: stretch;
+            gap: v.$size-12;
+
+            margin-bottom: v.$size-10;
         }
 
         &__step {
@@ -108,33 +115,38 @@
         }
 
         &__step-number{
+            position: relative;
+            z-index: 2;
+
             display: inline-flex;
             justify-content: center;
             align-items: center;
             min-width: v.$size-12;
             height: v.$size-12;
-            background-color: v.$color-purple;
-            border-radius: 50%;
+
+            margin-right: -0.75rem;
+
             color: v.$color-white;
             font-size: v.$size-7;
             line-height: 1;
-            position: relative;
-            z-index: 2;
-            margin-right: -12px;
 
+            background-color: v.$color-purple;
+            border-radius: 50%;
         }
 
         &__step-content {
             display: flex;
             align-items: center;
-            width: 100%;
             gap: v.$size-10;
-            background-color: v.$color-grey-100;
-            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-            border-radius: v.$size-10;
+            width: 100%;
+            height: 100%;
+
             padding: v.$size-14 v.$size-16;
             padding-right: v.$size-10;
-            height: 100%;
+
+            background-color: v.$color-grey-100;
+            box-shadow: 0 v.$size-2 (v.$size-14 + v.$size-one) 0 rgba(0, 0, 0, 0.15);
+            border-radius: v.$size-10;
         }
 
         &__step-icon-wrapper {
@@ -154,18 +166,18 @@
         }
 
         &__step-text {
-            // text-align: center;
             font-weight: 500;
         }
 
         @include m.desktop {
 
             &__container {
-                padding: v.$size-24 180px;
+                padding: v.$size-24 11.25rem;
             }
 
             &__steps {
             grid-template-columns: repeat(3, 1fr);
+
             margin-bottom: 0;
         }
 
@@ -180,6 +192,7 @@
         &__container {
             display: flex;
             flex-direction: column;
+
             padding: v.$size-24 v.$size-10;
             }
 
@@ -190,8 +203,9 @@
         &__cards {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            margin-bottom: v.$size-10;
             gap: v.$size-10;
+
+            margin-bottom: v.$size-10;
         }
 
         @include m.tablet {
@@ -204,12 +218,13 @@
         @include m.desktop {
 
         &__container {
-            padding: v.$size-14 180px;
+            padding: v.$size-14 11.25rem;
         }
 
         &__cards {
+            gap: v.$size-25 16.25rem;
+
             margin-bottom: 0;
-            gap: 50px 100px;
         }
         }
 
@@ -219,19 +234,23 @@
         position: relative;
 
         &__link {
-            display: block;
-            border-radius: v.$size-7 + v.$size-one;
-            overflow: hidden;
             position: relative;
-            background-color: v.$color-white;
+
+            display: block;
+            overflow: hidden;
+
             text-decoration: none;
             color: inherit;
+
+            background-color: v.$color-white;
+            border-radius: (v.$size-7 + v.$size-one); 
         }
 
         &__img {
             display: block;
             width: 100%;
-            height: 174px;
+            height: 10.875rem;
+
             object-fit: cover;
             object-position: center 100%;
 
@@ -252,14 +271,17 @@
             position: absolute;
             top: v.$size-6;
             right: v.$size-6;
-            background-color: v.$color-mint;
+            z-index: 1;
+
+            padding: v.$size-4 v.$size-6;
+
+            color: v.$color-green;
             font-size: v.$size-7;
             font-weight: 500;
-            padding: v.$size-4 v.$size-6;
-            border-radius: v.$size-1;
-            color: v.$color-green;
-            z-index: 1;
             line-height: 1;
+
+            background-color: v.$color-mint;
+            border-radius: v.$size-1;
         }
 
         &__content {
@@ -267,7 +289,7 @@
         }
 
         &__location {
-            font-size: 17px;
+            font-size: (v.$size-8 + v.$size-one);
             font-weight: 300;
         }
 
