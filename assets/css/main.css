@@ -310,21 +310,21 @@ button {
 }
 @media screen and (min-width: 1024px) {
   .footer__container {
-    height: 114px;
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
-    gap: 90px;
-    padding: 1.5rem 68px;
+    gap: 5.625rem;
+    height: 7.125rem;
+    padding: 1.5rem 4.25rem;
   }
   .footer .logo {
-    margin-bottom: 0;
     order: 2;
+    margin-bottom: 0;
   }
   .footer__nav-groups {
+    order: 1;
     flex-direction: row;
     gap: 3rem;
-    order: 1;
   }
   .footer__links {
     display: flex;

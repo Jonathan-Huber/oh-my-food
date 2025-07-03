@@ -9,7 +9,9 @@
     &__container {
         display: flex;
         flex-direction: column;
+
         padding: v.$size-12 v.$size-10;
+
         color: v.$color-white;
     }
 
@@ -42,23 +44,26 @@
     @include m.desktop {
 
         &__container {
-        height: 114px;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: flex-end;
-        gap: 90px;
-        padding: v.$size-12 68px;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 5.625rem;
+            height: 7.125rem;
+
+            padding: v.$size-12 v.$size-34;
         }
 
         .logo {
-        margin-bottom: 0;
-        order: 2;
+            order: 2;
+
+            margin-bottom: 0;
         }
 
         &__nav-groups {
+            order: 1;
+
             flex-direction: row;
             gap: v.$size-24;
-            order: 1;
         }
 
         &__links {
