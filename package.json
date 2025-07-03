@@ -4,8 +4,8 @@
   "description": "Ce projet fait partie de ma formation d'intégrateur web chez OpenClassrooms.  \r L’objectif est d’intégrer l’interface mobile-first du site d’une start-up, en utilisant **Sass** pour les styles, des **animations CSS**, et un système de **gestion de version avec Git et GitHub**.",
   "main": "index.js",
   "scripts": {
-  "sass": "sass sass/main.scss assets/css/main.css",
-  "sass:watch": "sass --watch sass/main.scss:assets/css/main.css"
+  "sass": "sass --no-source-map sass/main.scss assets/css/main.css",
+  "sass:watch": "sass --watch sass/main.scss:assets/css/main.css --no-source-map"
 },
   "repository": {
     "type": "git",
