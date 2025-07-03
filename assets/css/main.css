@@ -451,11 +451,11 @@ button {
 .page-home .process__step-icon {
   color: #7E7E7E;
 }
+.page-home .process__step-icon--purple {
+  color: #9356DC;
+}
 .page-home .process__step-text {
   font-weight: 500;
-}
-.page-home .process__step--restaurant .process__step-icon {
-  color: #9356DC;
 }
 @media screen and (min-width: 1024px) {
   .page-home .process__container {

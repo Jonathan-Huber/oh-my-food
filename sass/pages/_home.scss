@@ -147,18 +147,15 @@
 
         &__step-icon {
             color: v.$color-grey-400;
-            // font-size: v.$size-10;
+        }
+
+        &__step-icon--purple {
+            color: v.$color-purple;
         }
 
         &__step-text {
             // text-align: center;
             font-weight: 500;
-        }
-
-        &__step--restaurant {
-            .process__step-icon {
-                color: v.$color-purple;
-        }
         }
 
         @include m.desktop {
