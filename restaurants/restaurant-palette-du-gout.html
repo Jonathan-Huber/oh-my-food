@@ -31,107 +31,144 @@
     <img src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Plat du restaurant en situation sur une table" class="hero-plate__photo">
     </div>
 
-    <section class="menu">
-        <div class="menu__container">
-            <div class="menu__title-group">
-            <h1 class="menu__title">La palette du goût</h1>
-            <div class="heart">
-                <input type="checkbox" id="heart-toggle-3" class="heart__checkbox">
-                <label for="heart-toggle-3" class="heart__label" aria-label="Ajouter aux favoris">
-                    <img src="../assets/images/icon/heart.svg" alt="Coeur vide" class="heart__icon heart__icon--empty">
-                    <img src="../assets/images/icon/heart_hover.svg" alt="Coeur plein" class="heart__icon heart__icon--filled">
-                </label>
-            </div>
-            </div>
-            <!-- Entrées -->
-            <div class="menu__category">
-                <h2 class="menu__subtitle">ENTRÉES</h2>
-                <hr class="menu__separator">
+        <section class="menu">
+            <div class="menu__container">
 
-                <ul class="menu__items">
-                    <li class="menu__item  delay-1">
-                        <p class="menu__item-title">Fricassée d'escargots</p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">Au piment d’Espelette</p>
+                <div class="menu__title-group">
+                    <h1 class="menu__title">La palette du goût</h1>
+                    <div class="heart">
+                        <input type="checkbox" id="heart-toggle-3" class="heart__checkbox">
+                        <label for="heart-toggle-3" class="heart__label" aria-label="Ajouter aux favoris">
+                            <img src="../assets/images/icon/heart.svg" alt="Coeur vide" class="heart__icon heart__icon--empty">
+                            <img src="../assets/images/icon/heart_hover.svg" alt="Coeur plein" class="heart__icon heart__icon--filled">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Entrées -->
+                <div class="menu__category">
+                    <h2 class="menu__subtitle">ENTRÉES</h2>
+                    <hr class="menu__separator">
+                    <ul class="menu__items">
+                        <li class="menu__item  delay-1">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Fricassée d'escargots</p>
+                                <p class="menu__item-desc">Au piment d’Espelette et son thon de en boulette</p>
+                            </div>
                             <p class="menu__item-price">25€</p>
-                        </div>
-                    </li>
-                    <li class="menu__item delay-2">
-                        <p class="menu__item-title">Foie gras de canard mi-cuit</p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">Et ses copeaux de truffe noire</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>                             
+                        </li>
+
+                        <li class="menu__item delay-2">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Foie gras de canard mi-cuit</p>
+                                <p class="menu__item-desc">Et ses copeaux de truffe noire</p>
+                            </div>
                             <p class="menu__item-price">35€</p>
-                        </div>
-                    </li>
-                    <li class="menu__item delay-3">
-                        <p class="menu__item-title">Œuf au plat</p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">Assaisonné à la truffe sur lit de caviar</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-3">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Œuf au plat</p>
+                                <p class="menu__item-desc">Assaisonné à la truffe sur lit de caviar</p>
+                            </div>
                             <p class="menu__item-price">20€</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- Plats -->
-            <div class="menu__category">
-                <h2 class="menu__subtitle">PLATS</h2>
-                <hr class="menu__separator">
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-                <ul class="menu__items">
-                    <li class="menu__item delay-1">
-                        <p class="menu__item-title">Filet de bœuf aux herbes</p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">Accompagné de sa ribambelle de légumes</p>
+                <!-- Plats -->
+                <div class="menu__category">
+                    <h2 class="menu__subtitle">PLATS</h2>
+                    <hr class="menu__separator">
+                    <ul class="menu__items">
+                        <li class="menu__item delay-1">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Filet de bœuf aux herbes</p>
+                                <p class="menu__item-desc">Accompagné de sa ribambelle de légumes</p>
+                            </div>
                             <p class="menu__item-price">40€</p>
-                        </div>
-                    </li>
-                    <li class="menu__item delay-2">
-                        <p class="menu__item-title">Parmentier de queue de bœuf</p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">À la truffe noire sur sa purée de panais</p>
-                            <p class="menu__item-price">35€</p>
-                        </div>
-                    </li>
-                    <li class="menu__item delay-3">
-                        <p class="menu__item-title">Filet de turbot</p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">Aux agrumes</p>
-                            <p class="menu__item-price">44€</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- Desserts -->
-            <div class="menu__category">
-                <h2 class="menu__subtitle">DESSERTS</h2>
-                <hr class="menu__separator">
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
 
-                <ul class="menu__items">
-                    <li class="menu__item delay-1">
-                        <p class="menu__item-title">Paris-Brest</p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">Revisité</p>
+                        <li class="menu__item delay-2">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Parmentier de queue de bœuf</p>
+                                <p class="menu__item-desc">À la truffe noire sur sa purée de panais</p>
+                            </div>
+                            <p class="menu__item-price">35€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-3">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Filet de turbot</p>
+                                <p class="menu__item-desc">Aux agrumes</p>
+                            </div>
+                            <p class="menu__item-price">44€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu__category">
+                    <h2 class="menu__subtitle">DESSERTS</h2>
+                    <hr class="menu__separator">
+                    <ul class="menu__items">
+                        <li class="menu__item delay-1">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Paris-Brest</p>
+                                <p class="menu__item-desc">Revisité</p>
+                            </div>
                             <p class="menu__item-price">18€</p>
-                        </div>
-                    </li>
-                    <li class="menu__item delay-2">
-                        <p class="menu__item-title">Macaron au chocolat d'exception </p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">Et glace à la vanille de Madagascar</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-2">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Macaron au chocolat d'exception</p>
+                                <p class="menu__item-desc">Et glace à la vanille de Madagascar</p>
+                            </div>
                             <p class="menu__item-price">22€</p>
-                        </div>
-                    </li>
-                    <li class="menu__item delay-3">
-                        <p class="menu__item-title">Mousse au chocolat </p>
-                        <div class="menu__item-details">
-                            <p class="menu__item-desc">Au piment d'Espelette et à la truffe noire</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-3">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Mousse au chocolat</p>
+                                <p class="menu__item-desc">Au piment d'Espelette et à la truffe noire</p>
+                            </div>
                             <p class="menu__item-price">23€</p>
-                        </div>
-                    </li>
-                </ul>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="btn"><span>Commander</span></a>
+
             </div>
-        </div>
-    </section>
+        </section>
     </main>
     <!-- Pied de page -->
     <footer class="footer">

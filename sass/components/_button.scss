@@ -16,6 +16,7 @@
     align-items: center;        // Centre le contenu verticalement (axe secondaire)
     height: 3.125rem;           // Définit une hauteur fixe pour le bouton
     padding: 0 20px;            // Applique un espacement interne à gauche et à droite
+    min-width: 186px;
 
     // Dégradé avec angle proche de la verticale (bas vers haut)
     background: linear-gradient(
