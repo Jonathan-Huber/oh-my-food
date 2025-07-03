@@ -3,30 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+
     <title>Oh My Food</title>
     <meta name="description" content="Découvrez notre sélection de restaurants avec avis, menus et réservation facile.">
 </head>
 <body class="page-home">
 
-        <!-- En-tête -->
-        <header class="header">
-            <div class="container header__container">
-                <a href="#" class="header__back">
-                <img src="assets/images/icon/GoBack.svg" alt="" class="header__icon">
-                </a>
-                <h1 class="logo logo--header logo--use-text">
-                        <span class="logo__text">ohmyfood</span>
-                        <img src="assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo__image">
-                </h1>
-            </div>
-        </header>
+    <!-- En-tête -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="header__back">
+                <img src="assets/images/icon/goback.svg" alt="" class="header__icon">
+            </a>
 
-        <main>
+            <!-- 
+            Pour afficher le logo en texte ou en image,
+            basculez entre les classes 
+            "logo--use-text" (texte visible)
+            "logo--use-image" (image visible) sur le conteneur .logo ;
+            le CSS gère l’affichage automatiquement.
+            -->
+            <h1 class="logo logo--header logo--use-text">
+                <span class="logo__text">ohmyfood</span>
+                <img src="assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo__image">
+            </h1>
+        </div>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
 
         <!-- Localisation -->
         <div class="location">
@@ -34,20 +46,24 @@
             <span class="location__text">Paris, Bellville</span>
         </div>
 
-        <!-- Présentation -->
+        <!-- Section d'accroche : titre, sous-titre et bouton -->
         <section class="hero">
             <div class="container hero__container">
                 <h2 class="hero__title">Réservez le menu qui vous convient</h2>
                 <p class="hero__subtitle">Découvrez des restaurants d'exeption, séléctionnés par nos soins.</p>
-                <a href="#restaurants" class="btn hero__btn"><span>Explorer nos restaurants</span></a>
+                <a href="#restaurants" class="btn hero__btn">
+                    <span>Explorer nos restaurants</span>
+                </a>
             </div>
         </section>
 
-        <!-- Fonctionnement -->
+        <!-- Étapes du fonctionnement du service Ohmyfood -->
         <section class="process">
             <div class="container process__container">
                 <h2 class="process__title">Fonctionnement</h2>
+
                 <div class="process__steps">
+
                     <div class="process__step">
                         <div class="process__step-number">1</div>
                         <div class="process__step-content">
@@ -57,6 +73,7 @@
                             <p class="process__step-text">Choisissez un restaurant</p>
                         </div>
                     </div>
+
                     <div class="process__step">
                         <div class="process__step-number">2</div>
                         <div class="process__step-content">
@@ -66,6 +83,7 @@
                             <p class="process__step-text">Composez votre menu</p>
                         </div>
                     </div>
+
                     <div class="process__step process__step--restaurant">
                         <div class="process__step-number">3</div>
                         <div class="process__step-content">
@@ -75,14 +93,16 @@
                             <p class="process__step-text">Dégustez au restaurant</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Restaurants -->
+        <!-- Liste des restaurants disponibles -->
         <section id="restaurants" class="restaurants">
             <div class="container restaurants__container">
                 <h2 class="restaurants__title">Restaurants</h2>
+
                 <div class="restaurants__cards">
 
                     <article class="restaurant-card">
@@ -93,7 +113,8 @@
                                 <h3 class="restaurant-card__title">La palette du goût</h3>
                                 <p class="restaurant-card__location">Ménilmontant</p>
                             </div>
-                        </a>    
+                        </a>
+
                         <!-- Bloc coeur interactif -->
                         <div class="heart">
                             <input type="checkbox" id="heart-toggle-1" class="heart__checkbox">
@@ -164,12 +185,19 @@
                 </div>
             </div>
         </section>
+        
+    </main>
 
-        </main>
-
-        <!-- Pied de page -->
-        <footer class="footer">
-            <div class="container footer__container">
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <!-- 
+            Pour afficher le logo en texte ou en image,
+            basculez entre les classes 
+            "logo--use-text" (texte visible)
+            "logo--use-image" (image visible) sur le conteneur .logo ;
+            le CSS gère l’affichage automatiquement.
+            -->
             <h2 class="logo logo--footer logo--use-text">
                 <a href="/">
                     <span class="logo__text">Ohmyfood</span>
@@ -200,8 +228,7 @@
                     </li>
                 </ul>
             </nav>
-            </div>
-        </footer>
-
+        </div>
+    </footer>
 </body>
 </html>
