@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+
+    <title>Le délice des sens – Restaurant</title>
+    <meta name="description" content="Le délice des sens.">
+</head>
+<body class="page-restaurants">
+
+    <!-- En-tête -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="../index.html" class="header__back">
+                <img src="../assets/images/icon/goback.svg" alt="" class="header__icon">
+            </a>
+
+            <!-- 
+            Pour afficher le logo en texte ou en image,
+            basculez entre les classes 
+            "logo--use-text" (texte visible)
+            "logo--use-image" (image visible) sur le conteneur .logo ;
+            le CSS gère l’affichage automatiquement.
+            -->
+            <div class="logo logo--header logo--use-text">
+                    <span class="logo__text">ohmyfood</span>
+                    <img src="../assets/images/logo/ohmyfood@2x.svg" alt="Ohmyfood" class="logo__image">
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+        <div class="hero-plate">
+            <img src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Plat du restaurant en situation sur une table" class="hero-plate__photo">
+        </div>
+
+        <section class="menu">
+            <div class="menu__container">
+
+                <div class="menu__title-group">
+                    <h1 class="menu__title">Le délice des sens</h1>
+                    <div class="heart">
+                        <input type="checkbox" id="heart-toggle-3" class="heart__checkbox">
+                        <label for="heart-toggle-3" class="heart__label" aria-label="Ajouter aux favoris">
+                            <img src="../assets/images/icon/heart.svg" alt="Coeur vide" class="heart__icon heart__icon--empty">
+                            <img src="../assets/images/icon/heart_hover.svg" alt="Coeur plein" class="heart__icon heart__icon--filled">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Entrées -->
+                <div class="menu__category">
+                    <h2 class="menu__subtitle">ENTRÉES</h2>
+                    <hr class="menu__separator">
+                    <ul class="menu__items">
+                        <li class="menu__item  delay-1">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Tartare de thon</p>
+                                <p class="menu__item-desc">Assaisonné au yuzu</p>
+                            </div>
+                            <p class="menu__item-price">25€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>   
+                        </li>
+
+                        <li class="menu__item delay-2">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Bouchée de homard croustillant </p>
+                                <p class="menu__item-desc">Et sa farandole de petits légumes</p>
+                            </div>
+                            <p class="menu__item-price">35€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-3">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Velouté de cèpes </p>
+                                <p class="menu__item-desc">Aux truffes</p>
+                            </div>
+                            <p class="menu__item-price">20€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Plats -->
+                <div class="menu__category">
+                    <h2 class="menu__subtitle">PLATS</h2>
+                    <hr class="menu__separator">
+                    <ul class="menu__items">
+                        <li class="menu__item delay-1">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Poulet rôti aux herbes de Provence </p>
+                                <p class="menu__item-desc">Et sa crème de truffe</p>
+                            </div>
+                            <p class="menu__item-price">40€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-2">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Langouste rôtie</p>
+                                <p class="menu__item-desc">Et ses légumes de saison</p>
+                            </div>
+                            <p class="menu__item-price">35€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-3">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Côte de bœuf Angus</p>
+                                <p class="menu__item-desc">Et sa purée de panais</p>
+                            </div>
+                            <p class="menu__item-price">44€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Desserts -->
+                <div class="menu__category">
+                    <h2 class="menu__subtitle">DESSERTS</h2>
+                    <hr class="menu__separator">
+                    <ul class="menu__items">
+                        <li class="menu__item delay-1">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Farandole de desserts</p>
+                                <p class="menu__item-desc">Du chef</p>
+                            </div>
+                            <p class="menu__item-price">18€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-2">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Crème brulée</p>
+                                <p class="menu__item-desc">Revisitée</p>
+                            </div>
+                            <p class="menu__item-price">22€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+
+                        <li class="menu__item delay-3">
+                            <div class="menu__item-texts">
+                                <p class="menu__item-title">Tiramisu</p>
+                                <p class="menu__item-desc">À la noisette</p>
+                            </div>
+                            <p class="menu__item-price">23€</p>
+                            <div class="menu__item-select">
+                                <img src="../assets/images/icon/check.svg" alt="Sélectionné">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <a href="#" class="btn"><span>Commander</span></a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container footer__container">
+
+            <!-- 
+            Pour afficher le logo en texte ou en image,
+            basculez entre les classes 
+            "logo--use-text" (texte visible)
+            "logo--use-image" (image visible) sur le conteneur .logo ;
+            le CSS gère l’affichage automatiquement.
+            -->
+            <h2 class="logo logo--footer logo--use-text">
+                <a href="/">
+                    <span class="logo__text">Ohmyfood</span>
+                    <img src="../assets/images/logo/ohmyfood@2x_white.svg" alt="Ohmyfood" class="logo__image">
+                </a>
+            </h2>
+
+            <nav class="footer__nav-groups" aria-label="Liens utiles">
+                <ul class="footer__links">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-xs fa-utensils footer__icon"></i>
+                            Proposer un restaurant
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-xs fa-handshake-angle footer__icon"></i>
+                            Devenir partenaire
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="mailto:">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
