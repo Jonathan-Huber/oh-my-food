@@ -558,6 +558,9 @@ button {
 .page-restaurants .header {
   box-shadow: none;
 }
+.page-restaurants .header__back {
+  display: block;
+}
 .page-restaurants .hero-plate {
   position: relative;
 }

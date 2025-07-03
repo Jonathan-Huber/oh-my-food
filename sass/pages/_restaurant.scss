@@ -5,7 +5,11 @@
 
     // header
     .header {
-    box-shadow: none;
+        box-shadow: none;
+    }
+
+    .header__back {
+        display: block;
     }
 
     .hero-plate {
