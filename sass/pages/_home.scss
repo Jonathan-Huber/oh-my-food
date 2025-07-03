@@ -4,13 +4,13 @@
 /**** _home.scss — Styles de la page home ****/
 .page-home {
 
-    /*header*/
+    // header
     .header__back {
     display: none;
     }
 
 
-    /*localisation*/
+    // localisation
     .location {
         display: flex;
         justify-content: center;
@@ -32,7 +32,7 @@
         }
     }
 
-    /*hero*/
+    // hero
     .hero {
         background-color: v.$color-grey-100;
 
@@ -81,7 +81,7 @@
         }
     }
 
-    /*Fonctionnement*/
+    // Fonctionnement
     .process {
 
         &__container {
@@ -176,7 +176,7 @@
 
     }
 
-    /*Restaurants*/
+    // Restaurants
     .restaurants {    
         background-color: v.$color-grey-100;
 
