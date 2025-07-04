@@ -15,9 +15,7 @@
         position: relative;
         z-index: 1;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include m.flex-center;
         gap: (v.$size-8 + v.$size-one);
         height: v.$size-25;
 
@@ -40,10 +38,8 @@
         background-color: v.$color-grey-100;
 
         &__container {
-        display: flex;
+        @include m.flex-center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
         padding: v.$size-19 v.$size-16;
 
@@ -150,9 +146,7 @@
         }
 
         &__step-icon-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include m.flex-center;
             width: v.$size-10;
             height: v.$size-10;
         }

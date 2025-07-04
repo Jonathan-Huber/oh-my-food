@@ -362,9 +362,9 @@ button {
 }
 .page-home .hero__container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 2.375rem 2rem;
   text-align: center;
 }

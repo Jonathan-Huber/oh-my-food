@@ -195,9 +195,7 @@
         }
 
         &__item-select {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include m.flex-center;
             flex-shrink: 0;
             width: (v.$size-29 + v.$size-one);
             height: (v.$size-34 + v.$size-one);

@@ -10,9 +10,7 @@
     box-shadow: 0 v.$size-1 v.$size-2 rgba(0, 0, 0, 0.15);
 
     &__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include m.flex-center;
         height: 3.9375rem;
     }
 

@@ -1,9 +1,20 @@
+
+/// Centre un conteneur en flexbox (horizontal + vertical)
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/// Media query tablette (min-width: 768px)
 @mixin tablet {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
 
+
+/// Media query desktop (min-width: 1024px)
 @mixin desktop {
   @media screen and (min-width: 1024px) {
     @content;

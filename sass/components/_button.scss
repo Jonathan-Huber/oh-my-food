@@ -1,4 +1,5 @@
 @use '../utils/variables' as v;     // Permet d'utiliser les variables définies dans utils/variables avec l’alias v
+@use '../utils/mixins' as m;   // Permet d'utiliser les mixins définies dans utils/mixins avec l’alias m
 @use 'sass:color';                  // Active les fonctions Sass pour manipuler les couleurs
 
 // button.scss — Styles des boutons
@@ -11,9 +12,8 @@
 
 .btn {
     position: relative;         // Permet de positionner ::after en absolu par rapport au bouton
-    display: flex;              // Utilise Flexbox pour pouvoir aligner le contenu du bouton
-    justify-content: center;    // Centre le contenu horizontalement (axe principal)
-    align-items: center;        // Centre le contenu verticalement (axe secondaire)
+
+    @include m.flex-center;       // centre horizontalement et verticalement en flexbox
     height: 3.125rem;           // Définit une hauteur fixe pour le bouton
     padding: 0 20px;            // Applique un espacement interne à gauche et à droite
     min-width: 186px;
