@@ -249,6 +249,69 @@ button {
   box-shadow: 0 0 6px 3px #ff79da;
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+  animation: loader-fadeout 1s forwards;
+  animation-delay: 2s;
+}
+.loader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.loader__logo {
+  width: 11.25rem;
+  height: auto;
+  object-fit: contain;
+}
+.loader__spinner {
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.375rem solid rgba(255, 121, 218, 0.6);
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-fadeout {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+.page-home > *:not(.loader) {
+  opacity: 0;
+  pointer-events: none;
+  animation: content-fadein 1.5s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes content-fadein {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
 /**** _header.scss — Styles pour le header ****/
 .header {
   position: relative;
