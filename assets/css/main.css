@@ -748,7 +748,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .page-restaurants .menu__item {
-    animation-name: slideBounceDesktop;
+    animation-name: slideBounceTablet;
   }
 }
 .page-restaurants .menu__item-texts {
@@ -821,7 +821,7 @@ body {
     opacity: 1;
   }
 }
-@keyframes slideBounceDesktop {
+@keyframes slideBounceTablet {
   0% {
     transform: translateX(-100%);
     opacity: 0;

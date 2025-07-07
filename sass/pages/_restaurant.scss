@@ -115,7 +115,7 @@
             gap: v.$size-6;
         }
 
-        // Classes delay pour animation en cascade de slideBounce et slideBounceDesktop
+        // Classes delay pour animation en cascade de slideBounce et slideBounceTablet
         .delay-1 { animation-delay: 0.2s; }
         .delay-2 { animation-delay: 0.4s; }
         .delay-3 { animation-delay: 0.6s; }
@@ -147,7 +147,7 @@
             }
 
             @include m.tablet {
-            animation-name: slideBounceDesktop;
+            animation-name: slideBounceTablet;
             }
         }
 
@@ -236,7 +236,7 @@
     }
 }
 
-@keyframes slideBounceDesktop {
+@keyframes slideBounceTablet {
     0% {
         transform: translateX(-100%);
         opacity: 0;
