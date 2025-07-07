@@ -8,10 +8,6 @@
         box-shadow: none;
     }
 
-    .header__back {
-        display: block;
-    }
-
     .hero-plate {
         position: relative;
   
@@ -143,7 +139,8 @@
             transform: translateX(-100%);
             animation: slideBounce 0.8s ease-in-out forwards;
 
-            &:hover {
+            &:hover,
+            &:focus-visible {
               .menu__item-select {
                 margin-right: 0;
               }

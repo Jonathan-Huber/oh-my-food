@@ -28,9 +28,9 @@ ol {
 /* Les images prennent au maximum la largeur du conteneur 
    et conservent leurs proportions. */
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 /* Les liens prennent la couleur du texte environnant. */
@@ -86,9 +86,11 @@ body {
   margin: 0 auto;
 }
 
-button {
-  cursor: pointer;
-  font-family: inherit;
+:focus-visible {
+  outline: 0.125rem solid #FF79DA;
+  outline-offset: 0.25rem;
+  border-radius: 0.25rem;
+  transition: outline 0.2s ease-in-out, outline-offset 0.2s ease-in-out, border-radius 0.2s ease-in-out;
 }
 
 /**** _heart.scss — Styles du coeur intéractif ****/
@@ -146,9 +148,9 @@ button {
   opacity: 1;
 }
 .heart__checkbox:focus-visible + .heart__label {
-  outline: 2px solid #FF79DA;
-  outline-offset: 3px;
-  border-radius: 6px;
+  outline: 0.125rem solid #FF79DA;
+  outline-offset: 0.25rem;
+  border-radius: 0.25rem;
   transition: outline 0.2s ease-in-out, outline-offset 0.2s ease-in-out, border-radius 0.2s ease-in-out;
 }
 
@@ -324,11 +326,18 @@ button {
   align-items: center;
   height: 3.9375rem;
 }
-.header__icon {
+.header__back {
   position: absolute;
   left: 1rem;
   top: 50%;
   transform: translateY(-50%);
+  display: inline-block;
+}
+.header__back:focus {
+  outline: 0.125rem solid #FF79DA;
+  outline-offset: 0.25rem;
+  border-radius: 0.25rem;
+  transition: outline 0.2s ease-in-out, outline-offset 0.2s ease-in-out, border-radius 0.2s ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .header__container {
@@ -397,9 +406,6 @@ button {
 }
 
 /**** _home.scss — Styles de la page home ****/
-.page-home .header__back {
-  display: none;
-}
 .page-home .location {
   position: relative;
   z-index: 1;
@@ -621,9 +627,6 @@ button {
 .page-restaurants .header {
   box-shadow: none;
 }
-.page-restaurants .header__back {
-  display: block;
-}
 .page-restaurants .hero-plate {
   position: relative;
 }
@@ -740,7 +743,7 @@ button {
   transform: translateX(-100%);
   animation: slideBounce 0.8s ease-in-out forwards;
 }
-.page-restaurants .menu__item:hover .menu__item-select {
+.page-restaurants .menu__item:hover .menu__item-select, .page-restaurants .menu__item:focus-visible .menu__item-select {
   margin-right: 0;
 }
 @media screen and (min-width: 768px) {

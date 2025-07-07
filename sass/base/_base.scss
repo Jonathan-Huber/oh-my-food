@@ -1,4 +1,5 @@
 @use '../utils/variables' as v;
+@use '../utils/mixins' as m;
 
 /**** _base.scss — Styles globaux de base ****/
 
@@ -90,7 +91,6 @@ body {
   margin: 0 auto;
 }
 
-button {
-  cursor: pointer;
-  font-family: inherit;
+:focus-visible {
+  @include m.focus-style;
 }

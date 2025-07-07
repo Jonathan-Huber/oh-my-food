@@ -14,12 +14,17 @@
         height: (v.$size-31 + v.$size-one);
     }
 
-    &__icon {
+    &__back {
         position: absolute;
         left: v.$size-8;
         top: 50%;
-
         transform: translateY(-50%);
+
+        display: inline-block;
+
+        &:focus {
+            @include m.focus-style;
+        }
     }
 
     @include m.tablet {
