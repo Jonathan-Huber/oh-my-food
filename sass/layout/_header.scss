@@ -11,7 +11,7 @@
 
     &__container {
         @include m.flex-center;
-        height: 3.9375rem;
+        height: (v.$size-31 + v.$size-one);
     }
 
     &__icon {
@@ -24,7 +24,7 @@
 
     @include m.tablet {
         &__container {
-            height: 6rem;
+            height: 6rem; // 96px
         }
     }
 

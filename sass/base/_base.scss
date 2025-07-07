@@ -30,9 +30,9 @@ ol {
 /* Les images prennent au maximum la largeur du conteneur 
    et conservent leurs proportions. */
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 /* Les liens prennent la couleur du texte environnant. */
@@ -51,7 +51,7 @@ html {
 }
 
 body {
-  min-width: 360px;
+  min-width: 22.5rem; // 360px
   font-weight: 400;
   -webkit-font-smoothing: antialiased;  // Rendu plus net et léger sur Safari/Chrome (macOS)
   -moz-osx-font-smoothing: grayscale;   // Lissage en niveaux de gris sur Firefox (macOS)
@@ -63,20 +63,20 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   font-weight: 400;
-  font-family: 'Shrikhand', cursive;
-  font-size: v.$size-14; // 28px
+  font-family: v.$font-title;
+  font-size: v.$size-14;
 }
 
 h2 {
-  font-size: v.$size-12; // 24px
+  font-size: v.$size-12;
 }
 
 h3 {
-  font-size: v.$size-9; // 18px
+  font-size: v.$size-9;
 }
 
 p {
-  font-size: v.$size-8; // 16px
+  font-size: v.$size-8;
 }
 
 /* autres règles de base ici */
@@ -86,7 +86,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 90rem; // 1440px
   margin: 0 auto;
 }
 

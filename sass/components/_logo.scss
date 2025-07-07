@@ -52,10 +52,10 @@
   &--footer {
     font-family: 'Shrikhand', cursive;
     font-size: v.$size-8;
-    color: white;
+    color: v.$color-white;
 
     &.logo--use-image .logo__image {
-        max-width: 98px;
+        max-width: 6.125rem;  // 98px
         height: auto;
     }
   }

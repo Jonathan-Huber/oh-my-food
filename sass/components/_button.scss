@@ -13,10 +13,10 @@
 .btn {
     position: relative;         // Permet de positionner ::after en absolu par rapport au bouton
 
-    @include m.flex-center;       // centre horizontalement et verticalement en flexbox
-    height: 3.125rem;           // Définit une hauteur fixe pour le bouton
-    padding: 0 20px;            // Applique un espacement interne à gauche et à droite
-    min-width: 186px;
+    @include m.flex-center;     // centre horizontalement et verticalement en flexbox
+    height: v.$size-25;         // Définit une hauteur fixe pour le bouton
+    padding: 0 v.$size-10;      // Applique un espacement interne à gauche et à droite
+    min-width: 11.625rem;       // 186px
 
     // Dégradé avec angle proche de la verticale (bas vers haut)
     background: linear-gradient(
@@ -29,8 +29,8 @@
     font-size: v.$size-8;           // Applique la taille de police
     font-weight: 400;               // Applique un poids à la police
 
-    border-radius: v.$size-12 + v.$size-one;;             // Arrondit les coins du bouton
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);     // Ajoute une ombre sous le bouton
+    border-radius: (v.$size-12 + v.$size-one);             // Arrondit les coins du bouton
+    box-shadow: 0px v.$size-2 v.$size-5 rgba(0, 0, 0, 0.25);     // Ajoute une ombre sous le bouton
     overflow: hidden;                                   // Empêche le contenu (comme ::after) de déborder du bouton
 
     -webkit-tap-highlight-color: transparent; // supprime la surbrillance bleue au tap sur mobile
@@ -59,7 +59,7 @@
 
     // Style au survol
     &:hover {
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);   // Applique une ombre plus grande et visible au survol pour améliorer la mise en valeur
+        box-shadow: 0 v.$size-2 (v.$size-7 + v.$size-one) 0 rgba(0, 0, 0, 0.35);   // Applique une ombre plus grande et visible au survol pour améliorer la mise en valeur
 
         &::after {
             opacity: 1; // Rend visible le pseudo-élément quand on survole le bouton
@@ -74,8 +74,8 @@
 
     // Style au focus clavier
     &:focus-visible {
-    outline: 3px solid color.adjust(v.$color-pink, $lightness: -10%);   // Affiche un contour visible rose foncé quand le bouton reçoit le focus clavier (accessibilité)
-    outline-offset: 3px;                                                // Décale le contour pour ne pas empiéter sur le contenu
-    box-shadow: 0 0 6px 3px color.adjust(v.$color-pink, $alpha: 0.6);     // Ajoute un halo rose translucide autour pour renforcer la visibilité du focus
+    outline: (v.$size-1 + v.$size-one) solid color.adjust(v.$color-pink, $lightness: -10%);   // Affiche un contour visible rose foncé quand le bouton reçoit le focus clavier (accessibilité)
+    outline-offset: (v.$size-1 + v.$size-one);                                                // Décale le contour pour ne pas empiéter sur le contenu
+    box-shadow: 0 0 v.$size-3 (v.$size-1 + v.$size-one) color.adjust(v.$color-pink, $alpha: 0.6);     // Ajoute un halo rose translucide autour pour renforcer la visibilité du focus
     }
 }

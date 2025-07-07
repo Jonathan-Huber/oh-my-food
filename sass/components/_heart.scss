@@ -1,5 +1,6 @@
-/**** _heart.scss — Styles du coeur intéractif ****/
+@use '../utils/variables' as v;
 
+/**** _heart.scss — Styles du coeur intéractif ****/
 
 /* Composant cœur principal */                                                  //Commentaire pour .css
 /* .heart__checkbox — Élément masqué pour gérer l'état "coché" */               //Commentaire pour .css
@@ -10,10 +11,10 @@
 
 // Conteneur global du coeur (autour de l’input et du label)
 .heart {
-    position: relative;       // Positionne le coeur comme référence pour les enfants (absolu)
-    display: inline-block;    // Permet d’afficher le coeur à côté d’autres éléments en ligne
-    width: 22px;              // Fixe une largeur
-    height: 21px;             // Fixe une hauteur
+    position: relative;                 // Positionne le coeur comme référence pour les enfants (absolu)
+    display: inline-block;              // Permet d’afficher le coeur à côté d’autres éléments en ligne
+    width: v.$size-11;                  // Fixe une largeur
+    height: (v.$size-10 + v.$size-one); // Fixe une hauteur
 
     // On cache complètement la checkbox
     &__checkbox {
@@ -75,9 +76,9 @@
 
     // Focus Accessible
     &__checkbox:focus-visible + &__label {
-        outline: 2px solid #FF79DA;      // Affiche un contour rose au focus
-        outline-offset: 3px;               // Décale le contour
-        border-radius: 6px;                // Arrondis les bords
+        outline: v.$size-1 solid #FF79DA;         // Affiche un contour rose au focus
+        outline-offset: (v.$size-1 + v.$size-one);  // Décale le contour
+        border-radius: v.$size-3;                   // Arrondis les bords
         transition: outline 0.2s ease-in-out,
                     outline-offset 0.2s ease-in-out,
                     border-radius 0.2s ease-in-out;

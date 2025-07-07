@@ -166,7 +166,7 @@
         @include m.desktop {
 
             &__container {
-                padding: v.$size-24 11.25rem;
+                padding: v.$size-24 11.25rem;   // 180px
             }
 
             &__steps {
@@ -212,11 +212,11 @@
         @include m.desktop {
 
         &__container {
-            padding: v.$size-14 11.25rem;
+            padding: v.$size-14 11.25rem;   // rem = 180px
         }
 
         &__cards {
-            gap: v.$size-25 6.25rem;
+            gap: v.$size-25 6.25rem;    // rem = 100px
 
             margin-bottom: 0;
         }
@@ -243,7 +243,7 @@
         &__img {
             display: block;
             width: 100%;
-            height: 10.875rem;
+            height: 10.875rem;  // 174px
 
             object-fit: cover;
             object-position: center 100%;
