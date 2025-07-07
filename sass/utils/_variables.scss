@@ -25,7 +25,7 @@ $font-title: 'Shrikhand', cursive;
 // Basée sur un pas de 2px
 // Pour les tailles impaires, combiner avec $size-one (1px = 0.0625rem)
 // Exemple : 15px = $size-7 (14px) + $size-one (1px)
-$size-zero: 0rem;         // 0px
+
 $size-one: 0.0625rem;     // 1px
 $size-1: 0.125rem;        // 2px
 $size-2: 0.25rem;         // 4px
@@ -62,12 +62,3 @@ $size-32: 4rem;           // 64px
 $size-33: 4.125rem;       // 66px
 $size-34: 4.25rem;        // 68px
 $size-35: 4.375rem;       // 70px
-
-// == Breakpoints ================
-
-$breakpoint-mobile:  480px;
-$breakpoint-tablet:  768px;
-$breakpoint-desktop: 1024px;
-$breakpoint-large:   1440px;
-
-// à voir (Durées / transitions)
