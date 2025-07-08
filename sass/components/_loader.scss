@@ -30,51 +30,54 @@
     }
 
     &__spinner {
-    width: v.$size-25;
-    height: v.$size-25;
+        width: v.$size-25;
+        height: v.$size-25;
 
-    border: v.$size-3 solid rgba(v.$color-pink, 0.6);
-    border-top-color: v.$color-purple;
-    border-radius: 50%;
+        border: v.$size-3 solid rgba(v.$color-pink, 0.6);
+        border-top-color: v.$color-purple;
+        border-radius: 50%;
 
-    animation: spin 1.2s linear infinite;
+        animation: spin 1.2s linear infinite;
     }
 }
 
 //== Annimation du loader /===
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes loader-fadeout {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
 }
 
 //== Animation du contenu ===
 
 .page-home > *:not(.loader) {
-  opacity: 0;
-  pointer-events: none;
+    opacity: 0;
+    pointer-events: none;
 
-  // Fait apparaître le contenu après 1.5s (quand le loader disparaît)
-  animation: content-fadein 1.5s forwards;
-  animation-delay: 1.5s;
+// Fait apparaître le contenu après 1.5s (quand le loader disparaît)
+    animation: content-fadein 1.5s forwards;
+    animation-delay: 1.5s;
 }
 
 @keyframes content-fadein {
-  to {
-    opacity: 1;
-    pointer-events: auto;
-  }
+    to {
+        opacity: 1;
+        pointer-events: auto;
+    }
 }
