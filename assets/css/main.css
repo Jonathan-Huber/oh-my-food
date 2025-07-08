@@ -110,19 +110,19 @@ body {
   position: absolute;
   width: 1px;
   height: 1px;
+  overflow: hidden;
   margin: -1px;
   padding: 0;
+  white-space: nowrap;
   border: 0;
   clip: rect(0 0 0 0);
-  overflow: hidden;
-  white-space: nowrap;
 }
 .heart__label {
   position: relative;
+  display: inline-block;
   width: 100%;
   height: 100%;
   cursor: pointer;
-  display: inline-block;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
@@ -221,6 +221,7 @@ body {
   border-radius: 1.5625rem;
   box-shadow: 0px 0.25rem 0.625rem rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
   transition: box-shadow 0.3s ease-in-out, outline 0.3s ease-in-out;
 }
@@ -244,6 +245,7 @@ body {
 .btn > span {
   position: relative;
   z-index: 2;
+  user-select: none;
 }
 .btn:focus-visible {
   outline: 0.1875rem solid rgb(255, 70, 203.9179104478);
@@ -286,6 +288,9 @@ body {
 }
 
 @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
   to {
     transform: rotate(360deg);
   }
@@ -332,8 +337,9 @@ body {
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
+  user-select: none;
 }
-.header__back:focus {
+.header__back:focus-visible {
   outline: 0.125rem solid #FF79DA;
   outline-offset: 0.25rem;
   border-radius: 0.25rem;
