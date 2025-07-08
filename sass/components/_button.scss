@@ -33,7 +33,8 @@
     box-shadow: 0px v.$size-2 v.$size-5 rgba(0, 0, 0, 0.25);     // Ajoute une ombre sous le bouton
     overflow: hidden;                                   // Empêche le contenu (comme ::after) de déborder du bouton
 
-    -webkit-tap-highlight-color: transparent; // supprime la surbrillance bleue au tap sur mobile
+    touch-action: manipulation;               // Améliore la réactivité tactile en supprimant le délai de clic mobile
+    -webkit-tap-highlight-color: transparent; // Supprime le flash bleu/gris au tap sur iOS/Android
 
     transition: box-shadow 0.3s ease-in-out, outline 0.3s ease-in-out;  // Anime en douceur l’ombre et le contour quand ils changent
 
@@ -70,6 +71,7 @@
     > span {
     position: relative; // Active le positionnement pour permettre la gestion du z-index
     z-index: 2;         // Place le texte au-dessus du décor (::after) pour qui soit visible
+    user-select: none;  // Empêche la sélection du texte du bouton
     }
 
     // Style au focus clavier

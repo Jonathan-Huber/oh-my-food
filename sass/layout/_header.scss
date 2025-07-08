@@ -22,7 +22,9 @@
 
         display: inline-block;
 
-        &:focus {
+        user-select: none;
+
+        &:focus-visible {
             @include m.focus-style;
         }
     }
