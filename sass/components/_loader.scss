@@ -1,54 +1,54 @@
 @use '../utils/variables' as v;
 @use '../utils/mixins' as m;
 
-// _loader.scss
+/**** _loader.scss — Styles et animations du loader ****/
 
 .loader {
-    position: fixed;
+    position: fixed;                        // Positionne le loader en plein écran
     top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 9999;
+    z-index: 9999;                          // Toujours au-dessus des autres éléments
   
-    @include m.flex-center;
+    @include m.flex-center;                 // Centre le contenu horizontalement et verticalement
 
     background: v.$color-white;
   
-    // Animation pour faire disparaître le loader après x secondes
-    animation: loader-fadeout 0.3s forwards;
-    animation-delay: 1.2s;
+    // Animation pour faire disparaître le loader après un délai
+    animation: loader-fadeout 0.3s forwards;  // Fait disparaître le loader en 0.3s et reste invisible après
+    animation-delay: 1.2s;                    // lance l'animation apres 1.2s
 
     &__content {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: v.$size-8;
+        flex-direction: column;     // Empile le logo et le spinner verticalement
+        align-items: center;        // Centre horizontalement les éléments
+        gap: v.$size-8;             // Espace entre le logo et le spinner
     }
 
     &__logo {
         width: 11.25rem;  // 180px
         height: auto;
-        object-fit: contain;
     }
 
     &__spinner {
         width: v.$size-25;
         height: v.$size-25;
 
-        border: v.$size-3 solid rgba(v.$color-pink, 0.6);
-        border-top-color: v.$color-purple;
-        border-radius: 50%;
+        border: v.$size-3 solid rgba(v.$color-pink, 0.6);   // Bord rose semi-transparent
+        border-top-color: v.$color-purple;                  // Bord supérieur violet plus visible
+        border-radius: 50%;                                 // Forme ronde
 
-        animation: spin 1.2s linear infinite;
+
+        animation: spin 1.2s linear infinite;               // Fait tourner le spinner en 1.2s de façon continue et régulière
     }
 }
 
-//== Annimation du loader /===
+//== Animations utilisées par le loader ===
 
 @keyframes spin {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg);    // Départ à 0°
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg);  // Tour complet
     }
 }
 
@@ -58,26 +58,26 @@
         visibility: visible;
     }
     to {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
+        opacity: 0;             // Disparition
+        visibility: hidden;     // Cache l’élément
+        pointer-events: none;   // Désactive les clics / interactions
     }
 }
 
 //== Animation du contenu ===
 
 .page-home > *:not(.loader) {
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0;                // Cache le contenu au départ (sauf loader)
+    pointer-events: none;      // Désactive les clics / interactions
 
-// Fait apparaître le contenu après 1.5s (quand le loader disparaît)
-    animation: content-fadein 1.5s forwards;
-    animation-delay: 1.5s;
+// Fait apparaître le contenu après disparition du loader (1.5s)
+    animation: content-fadein 1s forwards;    // Fait aparaître le contenu en 1s 
+    animation-delay: 1.5s;                     // lance l'animation apres 1.5s (après disparition du loader)
 }
 
 @keyframes content-fadein {
     to {
-        opacity: 1;
-        pointer-events: auto;
+        opacity: 1;             // Rends visible le contenu
+        pointer-events: auto;   // Réactive les interactions
     }
 }

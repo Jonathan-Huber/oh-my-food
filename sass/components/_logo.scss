@@ -13,44 +13,45 @@
     }
 
     &__image {
-        display: none;
+        display: none;      // Par défaut, l’image du logo est cachée (on montre le texte)
         max-width: 100%;
         height: auto;
     }
 
-    // Modifier si on veut utiliser une image à la place du texte
+    // Modificateur pour utiliser une image à la place du text
     &--use-image {
         & .logo__text {
-            display: none;
+            display: none;          // Cache le texte du logo
         }
         & .logo__image {
-            display: inline-block;
+            display: inline-block;  // Affiche l’image du logo
         }
     }
 
-    // Modificateur pour le logo dans le header (h1)
+    // Modificateur pour le logo affiché dans le header (balise h1)
     &--header {
-        text-align: center;
         display: flex;
         align-items: center;
+
         height: 100%;
-        font-family: 'Shrikhand', cursive;
+        font-family: v.$font-title;
         font-size: v.$size-15;
         color: v.$color-black;
+        text-align: center;
 
         @include m.tablet {
         font-size: v.$size-17;
         }
 
         &.logo--use-image .logo__image {
-            max-width: 162px;
+            max-width: 10.125rem;   // 162px
             height: auto;
         }
     }
 
     // Modificateur pour le logo dans le footer (h2)
     &--footer {
-        font-family: 'Shrikhand', cursive;
+        font-family: v.$font-title;
         font-size: v.$size-8;
         color: v.$color-white;
 

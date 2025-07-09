@@ -24,9 +24,10 @@ $font-title: 'Shrikhand', cursive;
 // == Échelle de tailles unifiée (rem) : espacements, typographie, radius... ==
 // Basée sur un pas de 2px
 // Pour les tailles impaires, combiner avec $size-one (1px = 0.0625rem)
-// Exemple : 15px = $size-7 (14px) + $size-one (1px)
+// Exemple : pour obtenir 15px, on additionne $size-7 (14px) + $size-one (1px) => ($size-7 + $size-one)
 
 $size-one: 0.0625rem;     // 1px
+
 $size-1: 0.125rem;        // 2px
 $size-2: 0.25rem;         // 4px
 $size-3: 0.375rem;        // 6px
