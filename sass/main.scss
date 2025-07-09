@@ -1,11 +1,11 @@
 // Import du fichier de base (styles globaux)
 @use 'base/base';
 
-// Import des utilitaires (variables, mixins, fonctions)
+// Import des utilitaires (variables, mixins)
 @use 'utils/variables';
 @use 'utils/mixins';
 
-// Import des composants (logo, boutons, cartes, icônes, loader)
+// Import des composants (logo, boutons, coeur, loader)
 @use 'components/heart';
 @use 'components/logo';
 @use 'components/button';
