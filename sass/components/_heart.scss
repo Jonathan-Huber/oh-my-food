@@ -32,7 +32,7 @@
         white-space: nowrap;    // Empêche les retours à la ligne
 
         border: 0;              // Supprime la bordure
-        clip: rect(0 0 0 0);    // Masque visuellement
+        clip-path: inset(100%); // Masque visuellement
     }
 
     // Label qui déclenche le toggle (clic)
