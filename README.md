@@ -20,7 +20,7 @@ L’objectif est d’intégrer l’interface mobile-first du site d’une start-
 
 ## Statut
 
-En cours
+Finalisé pour soutenance - 10/07/2025
 
 ## Auteur
 
