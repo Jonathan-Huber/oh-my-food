@@ -393,7 +393,7 @@ body {
     align-items: flex-end;
     gap: 5.625rem;
     height: 7.125rem;
-    padding: 1.5rem 4.25rem;
+    padding: 1.875rem 4.25rem;
   }
   .footer .logo {
     order: 2;
