@@ -750,7 +750,7 @@ body {
   animation: slideBounce 0.8s ease-in-out forwards;
 }
 .page-restaurants .menu__item:hover .menu__item-select, .page-restaurants .menu__item:focus-visible .menu__item-select {
-  margin-right: 0;
+  transform: translateX(0);
 }
 @media screen and (min-width: 768px) {
   .page-restaurants .menu__item {
@@ -795,10 +795,10 @@ body {
   flex-shrink: 0;
   width: 3.6875rem;
   height: 4.3125rem;
-  margin-right: -3.6875rem;
+  transform: translateX(100%);
   color: #FFFFFF;
   background-color: #99E2D0;
-  transition: margin-right 0.5s ease;
+  transition: transform 0.5s ease;
 }
 .page-restaurants .menu .btn {
   align-self: center;
