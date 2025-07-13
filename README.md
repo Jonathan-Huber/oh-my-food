@@ -20,7 +20,11 @@ L’objectif est d’intégrer l’interface mobile-first du site d’une start-
 
 ## Statut
 
-Finalisé pour soutenance - 10/07/2025
+Finalisé et validé en soutenance le 11/07/2025
+
+## Versions
+
+- `v1.0-soutenance` : Version validée lors de la soutenance le 11/07/2025
 
 ## Auteur
 
