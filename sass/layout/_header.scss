@@ -25,7 +25,7 @@
         user-select: none;
 
         &:focus-visible {
-            @include m.focus-style;
+            @include m.focus-style(true);
         }
     }
 

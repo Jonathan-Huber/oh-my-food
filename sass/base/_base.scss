@@ -52,7 +52,7 @@ html {
 }
 
 body {
-  min-width: 22.5rem; // 360px
+  min-width: v.$body-width-min;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;  // Rendu plus net et léger sur Safari/Chrome (macOS)
   -moz-osx-font-smoothing: grayscale;   // Lissage en niveaux de gris sur Firefox (macOS)
@@ -87,10 +87,10 @@ body {
 }
 
 .container {
-  max-width: 90rem; // 1440px
+  max-width: v.$container-width-max;
   margin: 0 auto;
 }
 
-:focus-visible {
-  @include m.focus-style;
+*:focus-visible {
+  @include m.focus-style();
 }

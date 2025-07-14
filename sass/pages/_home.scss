@@ -16,7 +16,7 @@
         color: v.$color-grey-800;
 
         background-color: v.$color-grey-200;
-        box-shadow: 0 v.$size-2 v.$size-2 0 rgba(0, 0, 0, 0.25);
+        box-shadow: v.$shadow-location;
 
         &__text {
             font-weight: 500;
@@ -121,7 +121,7 @@
             line-height: 1;
 
             background-color: v.$color-purple;
-            border-radius: 50%;
+            border-radius: v.$radius-round;
         }
 
         &__step-content {
@@ -135,8 +135,8 @@
             padding-right: v.$size-10;
 
             background-color: v.$color-grey-100;
-            box-shadow: 0 v.$size-2 (v.$size-14 + v.$size-one) 0 rgba(0, 0, 0, 0.15);
-            border-radius: v.$size-10;
+            box-shadow: v.$shadow-step;
+            border-radius: v.$step-radius;
         }
 
         &__step-icon-wrapper {
@@ -231,13 +231,13 @@
             color: inherit;
 
             background-color: v.$color-white;
-            border-radius: (v.$size-7 + v.$size-one); 
+            border-radius: v.$card-radius; 
         }
 
         &__img {
             display: block;
             width: 100%;
-            height: 10.875rem;  // 174px
+            height: v.$restaurant-card-img-height;
 
             object-fit: cover;
             object-position: center 100%;
@@ -269,7 +269,7 @@
             line-height: 1;
 
             background-color: v.$color-mint;
-            border-radius: v.$size-1;
+            border-radius: v.$badge-radius;
         }
 
         &__content {

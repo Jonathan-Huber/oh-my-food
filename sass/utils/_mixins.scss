@@ -8,14 +8,21 @@
 }
 
 /// Style focus accessible
-@mixin focus-style {
-    outline: v.$size-1 solid v.$color-pink;
-    outline-offset: v.$size-2;
-    border-radius: v.$size-2;
+@mixin focus-style($apply-radius: false) {
+    outline: v.$focus-visible-outline solid v.$color-pink;
+    outline-offset: v.$focus-visible-offset;
+
+    @if $apply-radius {
+    border-radius: v.$focus-visible-radius;
     transition: 
-        outline 0.2s ease-in-out,
-        outline-offset 0.2s ease-in-out,
-        border-radius 0.2s ease-in-out;
+      outline 0.2s ease-in-out,
+      outline-offset 0.2s ease-in-out,
+      border-radius 0.2s ease-in-out;
+  } @else {
+    transition: 
+      outline 0.2s ease-in-out,
+      outline-offset 0.2s ease-in-out;
+  }
 }
 
 /// Media query tablette (min-width: 768px)

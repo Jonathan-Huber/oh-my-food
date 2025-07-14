@@ -15,8 +15,8 @@
     position: relative;                 // Positionne le coeur comme référence pour les enfants (absolu)
 
     display: inline-block;              // Permet d’afficher le coeur à côté d’autres éléments en ligne
-    width: v.$size-11;                  // Fixe une largeur
-    height: (v.$size-10 + v.$size-one); // Fixe une hauteur
+    width: v.$heart-width;              // Fixe une largeur
+    height: v.$heart-height;            // Fixe une hauteur
 
     // On cache complètement la checkbox
     &__checkbox {
@@ -85,6 +85,6 @@
 
     // Focus Accessible
     &__checkbox:focus-visible + &__label {
-        @include m.focus-style;
+        @include m.focus-style(true);
     }
 }

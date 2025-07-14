@@ -8,15 +8,17 @@
 /* .btn::after — Pseudo-élément décoratif */              //Commentaire pour .css
 /* .btn:hover et .btn:hover::after — Style au survol */   //Commentaire pour .css
 /* .btn > span — Texte au-dessus du décor */              //Commentaire pour .css
-/* .btn:focus-visible — Style au focus clavier */         //Commentaire pour .css
 
 .btn {
     position: relative;         // Permet de positionner ::after en absolu par rapport au bouton
 
-    @include m.flex-center;     // centre horizontalement et verticalement en flexbox
-    height: v.$size-25;         // Définit une hauteur fixe pour le bouton
-    padding: 0 v.$size-10;      // Applique un espacement interne à gauche et à droite
-    min-width: 11.625rem;       // 186px
+    @include m.flex-center;
+    min-width: v.$btn-width-min;
+    min-height: v.$btn-height-min;
+    height: auto;
+    overflow: hidden;                 // Empêche le contenu (comme ::after) de déborder du bouton
+
+    padding: v.$size-8 v.$size-10;
 
     // Dégradé avec angle proche de la verticale (bas vers haut)
     background: linear-gradient(
@@ -29,9 +31,8 @@
     font-size: v.$size-8;           // Applique la taille de police
     font-weight: 400;               // Applique un poids à la police
 
-    border-radius: (v.$size-12 + v.$size-one);             // Arrondit les coins du bouton
-    box-shadow: 0px v.$size-2 v.$size-5 rgba(0, 0, 0, 0.25);     // Ajoute une ombre sous le bouton
-    overflow: hidden;                                   // Empêche le contenu (comme ::after) de déborder du bouton
+    border-radius: v.$btn-radius;  // Arrondit les coins du bouton
+    box-shadow: v.$shadow-btn;     // Ajoute une ombre sous le bouton
 
     touch-action: manipulation;               // Améliore la réactivité tactile en supprimant le délai de clic mobile
     -webkit-tap-highlight-color: transparent; // Supprime le flash bleu/gris au tap sur iOS/Android
@@ -60,7 +61,7 @@
 
     // Style au survol
     &:hover {
-        box-shadow: 0 v.$size-2 (v.$size-7 + v.$size-one) 0 rgba(0, 0, 0, 0.35);   // Applique une ombre plus grande et visible au survol pour améliorer la mise en valeur
+        box-shadow: v.$shadow-btn-hover;   // Applique une ombre plus grande et visible au survol pour améliorer la mise en valeur
 
         &::after {
             opacity: 1; // Rend visible le pseudo-élément quand on survole le bouton
@@ -72,12 +73,5 @@
     position: relative; // Active le positionnement pour permettre la gestion du z-index
     z-index: 2;         // Place le texte au-dessus du décor (::after) pour qui soit visible
     user-select: none;  // Empêche la sélection du texte du bouton
-    }
-
-    // Style au focus clavier
-    &:focus-visible {
-    outline: (v.$size-1 + v.$size-one) solid color.adjust(v.$color-pink, $lightness: -10%);   // Affiche un contour visible rose foncé quand le bouton reçoit le focus clavier (accessibilité)
-    outline-offset: (v.$size-1 + v.$size-one);                                                // Décale le contour pour ne pas empiéter sur le contenu
-    box-shadow: 0 0 v.$size-3 (v.$size-1 + v.$size-one) color.adjust(v.$color-pink, $alpha: 0.6);     // Ajoute un halo rose translucide autour pour renforcer la visibilité du focus
     }
 }

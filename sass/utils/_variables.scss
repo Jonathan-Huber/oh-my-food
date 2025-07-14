@@ -21,7 +21,7 @@ $color-pink:     #FF79DA;   // Deuxième couleur du dégradé bouton, coeur acti
 $font-main:  'roboto', sans-serif;
 $font-title: 'Shrikhand', cursive;
 
-// == Échelle de tailles unifiée (rem) : espacements, typographie, radius... ==
+// == Échelle de tailles (rem) : espacements et typographie. ==
 // Basée sur un pas de 2px
 // Pour les tailles impaires, combiner avec $size-one (1px = 0.0625rem)
 // Exemple : pour obtenir 15px, on additionne $size-7 (14px) + $size-one (1px) => ($size-7 + $size-one)
@@ -63,3 +63,49 @@ $size-32: 4rem;           // 64px
 $size-33: 4.125rem;       // 66px
 $size-34: 4.25rem;        // 68px
 $size-35: 4.375rem;       // 70px
+
+// == Shadows ====================
+$shadow-btn: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+$shadow-btn-hover: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
+$shadow-btn-focus: 0 0 6px 1px rgba($color-pink, 0.6);
+$shadow-header: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+$shadow-location: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+$shadow-step: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+$shadow-menu-card: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+
+// == Radius =====================
+$btn-radius: 1.5625rem;
+$step-radius: 20px;
+$card-radius: 15px;
+$badge-radius: 2px;
+$menu-radius: 48px 48px 0 0;
+$focus-visible-radius: 4px;
+$radius-round: 50%;
+
+// == Border-Outline =============
+$focus-visible-outline: 2px;
+$focus-visible-offset: 4px;
+
+// == Décalage ===================
+$menu-margin-top-mobile: -53px;
+$menu-margin-top-tablet: -40px;
+$card-select-margin-right: -59px;
+
+// == Dimensions principales =====
+$container-width-max: 1440px;
+$body-width-min: 360px;
+$btn-height-min: 50px;
+$btn-width-min: 186px;
+$hero-plate-height-mobile: 275px;
+$hero-plate-height-tablet: 383px;
+$menu-width-max: 1055px;
+$restaurant-card-img-height: 174px;
+$separator-height: 3px;
+$separator-width: 40px;
+$menu-card-height-min: 69px;
+$card-select-width: 59px;
+$heart-height: 21px;
+$heart-width: 22px;
+$loader-logo-height: 180px;
+$header-logo-img-width-max: 162px;
+$footer-logo-img-width-max: 98px;

@@ -12,7 +12,7 @@
 
         padding: v.$size-12 v.$size-10;
 
-        color: v.$color-white;
+        color: v.$color-white;  
     }
 
     .logo {
@@ -31,6 +31,10 @@
         gap: v.$size-4;
 
         font-weight: 500;
+
+        a:focus-visible {
+            @include m.focus-style(true); 
+        }
     }
 
     &__links--weight {

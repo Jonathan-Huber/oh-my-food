@@ -44,19 +44,19 @@
         }
 
         &.logo--use-image .logo__image {
-            max-width: 10.125rem;   // 162px
+            max-width: v.$header-logo-img-width-max;
             height: auto;
         }
     }
 
-    // Modificateur pour le logo dans le footer (h2)
+    // Modificateur pour le logo dans le footer (balise h2)
     &--footer {
         font-family: v.$font-title;
         font-size: v.$size-8;
         color: v.$color-white;
 
         &.logo--use-image .logo__image {
-            max-width: 6.125rem;  // 98px
+            max-width: v.$footer-logo-img-width-max;
             height: auto;
         }
     }

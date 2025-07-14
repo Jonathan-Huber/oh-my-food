@@ -24,7 +24,7 @@
     }
 
     &__logo {
-        width: 11.25rem;  // 180px
+        width: v.$loader-logo-height;
         height: auto;
     }
 
@@ -34,7 +34,7 @@
 
         border: v.$size-3 solid rgba(v.$color-pink, 0.6);   // Bord rose semi-transparent
         border-top-color: v.$color-purple;                  // Bord supérieur violet plus visible
-        border-radius: 50%;                                 // Forme ronde
+        border-radius: v.$radius-round;                     // Forme ronde
 
 
         animation: spin 1.2s linear infinite;               // Fait tourner le spinner en 1.2s de façon continue et régulière
