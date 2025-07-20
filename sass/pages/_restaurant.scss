@@ -153,61 +153,62 @@
             @include m.tablet {
             animation-name: slideBounceTablet;
             }
-        }
 
-        &__card-texts {
-            display: flex;
-            flex-direction: column;
-            gap: v.$size-2;
-            min-width: 0;
-            flex-grow: 1;
+            &-texts {
+                display: flex;
+                flex-direction: column;
+                gap: v.$size-2;
+                min-width: 0;
+                flex-grow: 1;
 
-            margin: (v.$size-6 + v.$size-one) v.$size-2 (v.$size-6 + v.$size-one) v.$size-8 ;
-        }
+                margin: (v.$size-6 + v.$size-one) v.$size-2 (v.$size-6 + v.$size-one) v.$size-8 ;
+            }
 
-        &__card-title {
-            overflow: hidden;
-            min-width: 0;
+             &-title {
+                overflow: hidden;
+                min-width: 0;
 
-            font-size: v.$size-9;
-            font-weight: 500;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
+                font-size: v.$size-9;
+                font-weight: 500;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
 
-        &__card-desc {
-            overflow: hidden;
-            min-width: 0;
+            &-desc {
+                overflow: hidden;
+                min-width: 0;
 
-            font-size: (v.$size-7 + v.$size-one);
-            font-weight: 300;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
+                font-size: (v.$size-7 + v.$size-one);
+                font-weight: 300;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
 
-        &__card-price {
-            display: flex;
-            flex-shrink: 0;
+            &-price {
+                display: flex;
+                flex-shrink: 0;
 
-            margin: auto v.$size-8 v.$size-6 0;
+                margin: auto v.$size-8 v.$size-6 0;
 
-            font-size: (v.$size-7 + v.$size-one);
-            font-weight: 700;
-        }
+                font-size: (v.$size-7 + v.$size-one);
+                font-weight: 700;
+            }
 
-        &__card-select {
-            @include m.flex-center;
-            align-self: stretch;
-            flex-shrink: 0;
-            width: v.$card-select-width;
+            &-select {
+                @include m.flex-center;
+                align-self: stretch;
+                flex-shrink: 0;
+                width: v.$card-select-width;
 
-            margin-right: v.$card-select-margin-right;
+                margin-right: v.$card-select-margin-right;
 
-            color: v.$color-white;
+                color: v.$color-white;
 
-            background-color: v.$color-mint;
-            
-            transition: margin-right 0.5s ease;
+                background-color: v.$color-mint;
+                
+                transition: margin-right 0.5s ease;
+            }
+
         }
 
         .btn {
